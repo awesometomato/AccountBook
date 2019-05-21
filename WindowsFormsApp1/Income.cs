@@ -8,5 +8,6 @@ namespace WindowsFormsApp1
 {
     class Income : Money
     {
+        int money;
     }
 }
