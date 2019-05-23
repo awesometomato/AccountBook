@@ -28,67 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.idlabel = new System.Windows.Forms.Label();
+            this.passwordlabel = new System.Windows.Forms.Label();
+            this.idtextBox = new System.Windows.Forms.TextBox();
+            this.joinidtextbox = new System.Windows.Forms.TextBox();
+            this.okbutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.namelabel = new System.Windows.Forms.Label();
+            this.joinpasswordtextBox = new System.Windows.Forms.TextBox();
+            this.agelabel = new System.Windows.Forms.Label();
+            this.cancelbutton = new System.Windows.Forms.Button();
+            this.passwordchecklabel = new System.Windows.Forms.Label();
+            this.joinpasswordchecktextBox = new System.Windows.Forms.TextBox();
+            this.womenradio = new System.Windows.Forms.RadioButton();
+            this.menradio = new System.Windows.Forms.RadioButton();
+            this.agetextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label2
+            // idlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 186);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "아이디";
+            this.idlabel.AutoSize = true;
+            this.idlabel.Location = new System.Drawing.Point(122, 186);
+            this.idlabel.Name = "idlabel";
+            this.idlabel.Size = new System.Drawing.Size(52, 15);
+            this.idlabel.TabIndex = 1;
+            this.idlabel.Text = "아이디";
             // 
-            // label3
+            // passwordlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(122, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "비밀번호";
+            this.passwordlabel.AutoSize = true;
+            this.passwordlabel.Location = new System.Drawing.Point(122, 228);
+            this.passwordlabel.Name = "passwordlabel";
+            this.passwordlabel.Size = new System.Drawing.Size(67, 15);
+            this.passwordlabel.TabIndex = 2;
+            this.passwordlabel.Text = "비밀번호";
             // 
-            // textBox1
+            // idtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(240, 96);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 3;
+            this.idtextBox.Location = new System.Drawing.Point(240, 96);
+            this.idtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idtextBox.Name = "idtextBox";
+            this.idtextBox.Size = new System.Drawing.Size(100, 25);
+            this.idtextBox.TabIndex = 3;
             // 
-            // textBox2
+            // joinidtextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(240, 176);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 25);
-            this.textBox2.TabIndex = 4;
+            this.joinidtextbox.Location = new System.Drawing.Point(240, 176);
+            this.joinidtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.joinidtextbox.Name = "joinidtextbox";
+            this.joinidtextbox.Size = new System.Drawing.Size(175, 25);
+            this.joinidtextbox.TabIndex = 4;
             // 
-            // button1
+            // okbutton
             // 
-            this.button1.Location = new System.Drawing.Point(240, 308);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "확인";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.okbutton.Location = new System.Drawing.Point(240, 308);
+            this.okbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.okbutton.Name = "okbutton";
+            this.okbutton.Size = new System.Drawing.Size(75, 22);
+            this.okbutton.TabIndex = 5;
+            this.okbutton.Text = "확인";
+            this.okbutton.UseVisualStyleBackColor = true;
+            this.okbutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -100,109 +100,109 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "회원가입";
             // 
-            // label7
+            // namelabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(122, 99);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "이름";
+            this.namelabel.AutoSize = true;
+            this.namelabel.Location = new System.Drawing.Point(122, 99);
+            this.namelabel.Name = "namelabel";
+            this.namelabel.Size = new System.Drawing.Size(37, 15);
+            this.namelabel.TabIndex = 20;
+            this.namelabel.Text = "이름";
             // 
-            // textBox3
+            // joinpasswordtextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(240, 218);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 25);
-            this.textBox3.TabIndex = 21;
+            this.joinpasswordtextBox.Location = new System.Drawing.Point(240, 218);
+            this.joinpasswordtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.joinpasswordtextBox.Name = "joinpasswordtextBox";
+            this.joinpasswordtextBox.Size = new System.Drawing.Size(175, 25);
+            this.joinpasswordtextBox.TabIndex = 21;
             // 
-            // label6
+            // agelabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(122, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 15);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "나이";
+            this.agelabel.AutoSize = true;
+            this.agelabel.Location = new System.Drawing.Point(122, 144);
+            this.agelabel.Name = "agelabel";
+            this.agelabel.Size = new System.Drawing.Size(37, 15);
+            this.agelabel.TabIndex = 22;
+            this.agelabel.Text = "나이";
             // 
-            // button3
+            // cancelbutton
             // 
-            this.button3.Location = new System.Drawing.Point(391, 308);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 22);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "취소";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.cancelbutton.Location = new System.Drawing.Point(391, 308);
+            this.cancelbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cancelbutton.Name = "cancelbutton";
+            this.cancelbutton.Size = new System.Drawing.Size(75, 22);
+            this.cancelbutton.TabIndex = 26;
+            this.cancelbutton.Text = "취소";
+            this.cancelbutton.UseVisualStyleBackColor = true;
+            this.cancelbutton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label5
+            // passwordchecklabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(122, 265);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 15);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "비밀번호 확인";
+            this.passwordchecklabel.AutoSize = true;
+            this.passwordchecklabel.Location = new System.Drawing.Point(122, 265);
+            this.passwordchecklabel.Name = "passwordchecklabel";
+            this.passwordchecklabel.Size = new System.Drawing.Size(102, 15);
+            this.passwordchecklabel.TabIndex = 27;
+            this.passwordchecklabel.Text = "비밀번호 확인";
             // 
-            // textBox4
+            // joinpasswordchecktextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(240, 255);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 25);
-            this.textBox4.TabIndex = 28;
+            this.joinpasswordchecktextBox.Location = new System.Drawing.Point(240, 255);
+            this.joinpasswordchecktextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.joinpasswordchecktextBox.Name = "joinpasswordchecktextBox";
+            this.joinpasswordchecktextBox.Size = new System.Drawing.Size(175, 25);
+            this.joinpasswordchecktextBox.TabIndex = 28;
             // 
-            // radioButton1
+            // womenradio
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(372, 102);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 19);
-            this.radioButton1.TabIndex = 29;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "여자";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.womenradio.AutoSize = true;
+            this.womenradio.Location = new System.Drawing.Point(372, 102);
+            this.womenradio.Name = "womenradio";
+            this.womenradio.Size = new System.Drawing.Size(58, 19);
+            this.womenradio.TabIndex = 29;
+            this.womenradio.TabStop = true;
+            this.womenradio.Text = "여자";
+            this.womenradio.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // menradio
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(448, 102);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 19);
-            this.radioButton2.TabIndex = 30;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "남자";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.menradio.AutoSize = true;
+            this.menradio.Location = new System.Drawing.Point(448, 102);
+            this.menradio.Name = "menradio";
+            this.menradio.Size = new System.Drawing.Size(58, 19);
+            this.menradio.TabIndex = 30;
+            this.menradio.TabStop = true;
+            this.menradio.Text = "남자";
+            this.menradio.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // agetextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(240, 134);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 25);
-            this.textBox5.TabIndex = 31;
+            this.agetextBox.Location = new System.Drawing.Point(240, 134);
+            this.agetextBox.Name = "agetextBox";
+            this.agetextBox.Size = new System.Drawing.Size(100, 25);
+            this.agetextBox.TabIndex = 31;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 362);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.agetextBox);
+            this.Controls.Add(this.menradio);
+            this.Controls.Add(this.womenradio);
+            this.Controls.Add(this.joinpasswordchecktextBox);
+            this.Controls.Add(this.passwordchecklabel);
+            this.Controls.Add(this.cancelbutton);
+            this.Controls.Add(this.agelabel);
+            this.Controls.Add(this.joinpasswordtextBox);
+            this.Controls.Add(this.namelabel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.okbutton);
+            this.Controls.Add(this.joinidtextbox);
+            this.Controls.Add(this.idtextBox);
+            this.Controls.Add(this.passwordlabel);
+            this.Controls.Add(this.idlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -215,20 +215,20 @@
         #endregion
 
         
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label idlabel;
+        private System.Windows.Forms.Label passwordlabel;
+        private System.Windows.Forms.TextBox idtextBox;
+        private System.Windows.Forms.TextBox joinidtextbox;
+        private System.Windows.Forms.Button okbutton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label namelabel;
+        private System.Windows.Forms.TextBox joinpasswordtextBox;
+        private System.Windows.Forms.Label agelabel;
+        private System.Windows.Forms.Button cancelbutton;
+        private System.Windows.Forms.Label passwordchecklabel;
+        private System.Windows.Forms.TextBox joinpasswordchecktextBox;
+        private System.Windows.Forms.RadioButton womenradio;
+        private System.Windows.Forms.RadioButton menradio;
+        private System.Windows.Forms.TextBox agetextBox;
     }
 }

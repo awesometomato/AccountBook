@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox5.Text.Trim().Length == 0 || textBox6.Text.Trim().Length == 0)
+            if (idtextBox.Text.Trim().Length == 0 || passwordtextBox.Text.Trim().Length == 0)
                 MessageBox.Show("아이디 혹은 비밀번호를 입력해주세요.", "에러 메시지");
             else
             {
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
                 int cnt = 0;
                 foreach (var item in PrimaryOperation.list)
                 {
-                    if (item.Id == textBox5.Text)
+                    if (item.Id == idtextBox.Text)
                     {
                         tmp_user = item;
                         break;
@@ -72,10 +72,10 @@ namespace WindowsFormsApp1
                     MessageBox.Show("해당 아이디가 존재하지 않습니다.", "에러 메시지");
                 else
                 {
-                    if (tmp_user.Password == textBox6.Text)
+                    if (tmp_user.Password == passwordtextBox.Text)
                     {
-                        textBox5.Text = "";
-                        textBox6.Text = "";
+                        idtextBox.Text = "";
+                        passwordtextBox.Text = "";
                         PrimaryOperation.currentUser = cnt;
                         Form4 showForm4 = new Form4();
                         showForm4.ShowDialog();
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
                     else
                     {
                         MessageBox.Show("비밀번호가 올바르지 않습니다.", "에러 메시지");
-                        textBox6.Text = "";
+                        passwordtextBox.Text = "";
                     }
                 }
                 

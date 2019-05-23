@@ -42,25 +42,25 @@ namespace WindowsFormsApp1
         {
             int age;
 
-            if (textBox1.Text.Trim().Length == 0 || textBox2.Text.Trim().Length == 0 || textBox3.Text.Trim().Length == 0 ||
-                textBox4.Text.Trim().Length == 0 || textBox5.Text.Trim().Length == 0)
+            if (idtextBox.Text.Trim().Length == 0 || joinidtextbox.Text.Trim().Length == 0 || joinpasswordtextBox.Text.Trim().Length == 0 ||
+                joinpasswordchecktextBox.Text.Trim().Length == 0 || agetextBox.Text.Trim().Length == 0)
                 MessageBox.Show("입력되지 않은 빈 칸이 있습니다.", "에러 메시지");
-            else if (radioButton1.Checked == false && radioButton2.Checked == false)
+            else if (womenradio.Checked == false && menradio.Checked == false)
                 MessageBox.Show("성별을 선택해주세요.", "에러 메시지");
-            else if (PrimaryOperation.redundancyCheck(textBox2.Text) == -1)
+            else if (PrimaryOperation.redundancyCheck(joinidtextbox.Text) == -1)
                 MessageBox.Show("해당 아이디가 이미 존재합니다", "에러 메시지");
-            else if (int.TryParse(textBox5.Text, out age) == false)
+            else if (int.TryParse(agetextBox.Text, out age) == false)
                 MessageBox.Show("나이는 자연수만 입력해주세요.", "에러 메시지");
-            else if (textBox3.Text != textBox4.Text)
+            else if (joinpasswordtextBox.Text != joinpasswordchecktextBox.Text)
                 MessageBox.Show("비밀번호가 일치하지 않습니다.", "에러 메시지");
             else
             {
                 User member = new User();
-                member.Name = textBox1.Text;
-                member.Id = textBox2.Text;
-                member.Password = textBox3.Text;
+                member.Name = idtextBox.Text;
+                member.Id = joinidtextbox.Text;
+                member.Password = joinpasswordtextBox.Text;
                 member.Age = age;
-                if (radioButton1.Checked == true)
+                if (womenradio.Checked == true)
                     member.Gender = true;
                 else
                     member.Gender = false;
