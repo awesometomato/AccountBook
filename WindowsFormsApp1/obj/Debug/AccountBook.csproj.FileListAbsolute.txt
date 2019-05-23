@@ -1,0 +1,13 @@
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csprojAssemblyReference.cache
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Join.resources
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Add.resources
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.home.resources
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj.GenerateResource.cache
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj.CoreCompileInputs.cache
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

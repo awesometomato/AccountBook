@@ -264,7 +264,7 @@
             this.Controls.Add(this.yearlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home";
-            this.Text = "Form4";
+            this.Text = "Home";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -152,7 +152,7 @@
             this.Controls.Add(this.memotextBox);
             this.Controls.Add(this.momolabel);
             this.Name = "Add";
-            this.Text = "Form3";
+            this.Text = "Add";
             this.ResumeLayout(false);
             this.PerformLayout();
 

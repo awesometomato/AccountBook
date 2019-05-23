@@ -205,7 +205,7 @@
             this.Controls.Add(this.idlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Join";
-            this.Text = "Form2";
+            this.Text = "Join";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
