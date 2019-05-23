@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form2
+    partial class Join
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.idtextBox = new System.Windows.Forms.TextBox();
             this.joinidtextbox = new System.Windows.Forms.TextBox();
             this.okbutton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Joinlabel = new System.Windows.Forms.Label();
             this.namelabel = new System.Windows.Forms.Label();
             this.joinpasswordtextBox = new System.Windows.Forms.TextBox();
             this.agelabel = new System.Windows.Forms.Label();
@@ -90,15 +90,15 @@
             this.okbutton.UseVisualStyleBackColor = true;
             this.okbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label4
+            // Joinlabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 20F);
-            this.label4.Location = new System.Drawing.Point(38, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 34);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "회원가입";
+            this.Joinlabel.AutoSize = true;
+            this.Joinlabel.Font = new System.Drawing.Font("굴림", 20F);
+            this.Joinlabel.Location = new System.Drawing.Point(38, 28);
+            this.Joinlabel.Name = "Joinlabel";
+            this.Joinlabel.Size = new System.Drawing.Size(151, 34);
+            this.Joinlabel.TabIndex = 19;
+            this.Joinlabel.Text = "회원가입";
             // 
             // namelabel
             // 
@@ -183,7 +183,7 @@
             this.agetextBox.Size = new System.Drawing.Size(100, 25);
             this.agetextBox.TabIndex = 31;
             // 
-            // Form2
+            // Join
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,14 +197,14 @@
             this.Controls.Add(this.agelabel);
             this.Controls.Add(this.joinpasswordtextBox);
             this.Controls.Add(this.namelabel);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Joinlabel);
             this.Controls.Add(this.okbutton);
             this.Controls.Add(this.joinidtextbox);
             this.Controls.Add(this.idtextBox);
             this.Controls.Add(this.passwordlabel);
             this.Controls.Add(this.idlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form2";
+            this.Name = "Join";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
@@ -220,7 +220,7 @@
         private System.Windows.Forms.TextBox idtextBox;
         private System.Windows.Forms.TextBox joinidtextbox;
         private System.Windows.Forms.Button okbutton;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Joinlabel;
         private System.Windows.Forms.Label namelabel;
         private System.Windows.Forms.TextBox joinpasswordtextBox;
         private System.Windows.Forms.Label agelabel;

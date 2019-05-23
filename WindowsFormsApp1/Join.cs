@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class Join : Form
     {
-        public Form2()
+        public Join()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form1 showForm1 = new Form1();
+            Login showForm1 = new Login();
             showForm1.Show();
         }
 

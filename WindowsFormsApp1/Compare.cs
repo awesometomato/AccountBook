@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form5 : Form
+    public partial class Compare : Form
     {
-        public Form5()
+        public Compare()
         {
             InitializeComponent();
         }

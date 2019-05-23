@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class home : Form
     {
-        public Form3()
+        public home()
         {
             InitializeComponent();
             prepare_comboBox();
-        
         }
         public void prepare_comboBox()
         {
-            yearcomboBox.Items.Add("2019"); 
+            yearcomboBox.Items.Add("2019");
             yearcomboBox.Items.Add("2020");
             yearcomboBox.Items.Add("2021");
 
@@ -69,7 +68,23 @@ namespace WindowsFormsApp1
             daycomboBox.Items.Add("30");
             daycomboBox.Items.Add("31");
         }
-      
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Compare showForm5 = new Compare();
+            showForm5.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrimaryOperation.currentUser = -1;
+            this.Close();
+        }
+
+        private void addbutton_Click(object sender, EventArgs e)
+        {
+            Add showForm3 = new Add();
+            showForm3.ShowDialog();
+        }
     }
 }

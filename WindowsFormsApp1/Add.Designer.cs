@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form3
+    partial class Add
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
+            this.momolabel = new System.Windows.Forms.Label();
             this.memotextBox = new System.Windows.Forms.TextBox();
             this.moneytextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.moneylabel = new System.Windows.Forms.Label();
+            this.yearlabel = new System.Windows.Forms.Label();
+            this.monthlabel = new System.Windows.Forms.Label();
+            this.daylabel = new System.Windows.Forms.Label();
             this.addbutton = new System.Windows.Forms.Button();
             this.yearcomboBox = new System.Windows.Forms.ComboBox();
             this.monthcomboBox = new System.Windows.Forms.ComboBox();
             this.daycomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label5
+            // momolabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(77, 131);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 15);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "메모";
+            this.momolabel.AutoSize = true;
+            this.momolabel.Location = new System.Drawing.Point(77, 131);
+            this.momolabel.Name = "momolabel";
+            this.momolabel.Size = new System.Drawing.Size(37, 15);
+            this.momolabel.TabIndex = 11;
+            this.momolabel.Text = "메모";
             // 
             // memotextBox
             // 
@@ -66,41 +66,41 @@
             this.moneytextBox.Size = new System.Drawing.Size(100, 25);
             this.moneytextBox.TabIndex = 13;
             // 
-            // label4
+            // moneylabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(506, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 15);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "원";
+            this.moneylabel.AutoSize = true;
+            this.moneylabel.Location = new System.Drawing.Point(506, 131);
+            this.moneylabel.Name = "moneylabel";
+            this.moneylabel.Size = new System.Drawing.Size(22, 15);
+            this.moneylabel.TabIndex = 14;
+            this.moneylabel.Text = "원";
             // 
-            // label1
+            // yearlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 15);
-            this.label1.TabIndex = 15;
-            this.label1.Text = " 년";
+            this.yearlabel.AutoSize = true;
+            this.yearlabel.Location = new System.Drawing.Point(170, 80);
+            this.yearlabel.Name = "yearlabel";
+            this.yearlabel.Size = new System.Drawing.Size(27, 15);
+            this.yearlabel.TabIndex = 15;
+            this.yearlabel.Text = " 년";
             // 
-            // label2
+            // monthlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(340, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 15);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "월";
+            this.monthlabel.AutoSize = true;
+            this.monthlabel.Location = new System.Drawing.Point(340, 80);
+            this.monthlabel.Name = "monthlabel";
+            this.monthlabel.Size = new System.Drawing.Size(22, 15);
+            this.monthlabel.TabIndex = 16;
+            this.monthlabel.Text = "월";
             // 
-            // label3
+            // daylabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(506, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 15);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "일";
+            this.daylabel.AutoSize = true;
+            this.daylabel.Location = new System.Drawing.Point(506, 80);
+            this.daylabel.Name = "daylabel";
+            this.daylabel.Size = new System.Drawing.Size(22, 15);
+            this.daylabel.TabIndex = 17;
+            this.daylabel.Text = "일";
             // 
             // addbutton
             // 
@@ -135,7 +135,7 @@
             this.daycomboBox.Size = new System.Drawing.Size(121, 23);
             this.daycomboBox.TabIndex = 26;
             // 
-            // Form3
+            // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,14 +144,14 @@
             this.Controls.Add(this.monthcomboBox);
             this.Controls.Add(this.yearcomboBox);
             this.Controls.Add(this.addbutton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.daylabel);
+            this.Controls.Add(this.monthlabel);
+            this.Controls.Add(this.yearlabel);
+            this.Controls.Add(this.moneylabel);
             this.Controls.Add(this.moneytextBox);
             this.Controls.Add(this.memotextBox);
-            this.Controls.Add(this.label5);
-            this.Name = "Form3";
+            this.Controls.Add(this.momolabel);
+            this.Name = "Add";
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,13 +160,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label momolabel;
         private System.Windows.Forms.TextBox memotextBox;
         private System.Windows.Forms.TextBox moneytextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label moneylabel;
+        private System.Windows.Forms.Label yearlabel;
+        private System.Windows.Forms.Label monthlabel;
+        private System.Windows.Forms.Label daylabel;
         private System.Windows.Forms.Button addbutton;
         private System.Windows.Forms.ComboBox yearcomboBox;
         private System.Windows.Forms.ComboBox monthcomboBox;

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form4
+    partial class home
     {
         /// <summary>
         /// Required designer variable.
@@ -28,54 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.yearlabel = new System.Windows.Forms.Label();
+            this.monthlabel = new System.Windows.Forms.Label();
+            this.daylabel = new System.Windows.Forms.Label();
             this.incomeradiobutton = new System.Windows.Forms.RadioButton();
             this.expenseradiobutton = new System.Windows.Forms.RadioButton();
             this.moneytextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.moneylabel = new System.Windows.Forms.Label();
+            this.memolabel = new System.Windows.Forms.Label();
             this.memotextBox = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.comparebutton = new System.Windows.Forms.Button();
             this.logoutbutton = new System.Windows.Forms.Button();
             this.searchbutton = new System.Windows.Forms.Button();
             this.deletebutton = new System.Windows.Forms.Button();
             this.changebutton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.exelbutton = new System.Windows.Forms.Button();
             this.yearcomboBox = new System.Windows.Forms.ComboBox();
             this.monthcomboBox = new System.Windows.Forms.ComboBox();
             this.daycomboBox = new System.Windows.Forms.ComboBox();
+            this.moneylistbox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // label1
+            // yearlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = " 년";
+            this.yearlabel.AutoSize = true;
+            this.yearlabel.Location = new System.Drawing.Point(162, 90);
+            this.yearlabel.Name = "yearlabel";
+            this.yearlabel.Size = new System.Drawing.Size(27, 15);
+            this.yearlabel.TabIndex = 2;
+            this.yearlabel.Text = " 년";
             // 
-            // label2
+            // monthlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "월";
+            this.monthlabel.AutoSize = true;
+            this.monthlabel.Location = new System.Drawing.Point(329, 90);
+            this.monthlabel.Name = "monthlabel";
+            this.monthlabel.Size = new System.Drawing.Size(22, 15);
+            this.monthlabel.TabIndex = 4;
+            this.monthlabel.Text = "월";
             // 
-            // label3
+            // daylabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(486, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "일";
+            this.daylabel.AutoSize = true;
+            this.daylabel.Location = new System.Drawing.Point(486, 90);
+            this.daylabel.Name = "daylabel";
+            this.daylabel.Size = new System.Drawing.Size(22, 15);
+            this.daylabel.TabIndex = 5;
+            this.daylabel.Text = "일";
             // 
             // incomeradiobutton
             // 
@@ -109,23 +109,23 @@
             this.moneytextBox.Size = new System.Drawing.Size(100, 25);
             this.moneytextBox.TabIndex = 8;
             // 
-            // label4
+            // moneylabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(486, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 15);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "원";
+            this.moneylabel.AutoSize = true;
+            this.moneylabel.Location = new System.Drawing.Point(486, 142);
+            this.moneylabel.Name = "moneylabel";
+            this.moneylabel.Size = new System.Drawing.Size(22, 15);
+            this.moneylabel.TabIndex = 9;
+            this.moneylabel.Text = "원";
             // 
-            // label5
+            // memolabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "메모";
+            this.memolabel.AutoSize = true;
+            this.memolabel.Location = new System.Drawing.Point(53, 132);
+            this.memolabel.Name = "memolabel";
+            this.memolabel.Size = new System.Drawing.Size(37, 15);
+            this.memolabel.TabIndex = 10;
+            this.memolabel.Text = "메모";
             // 
             // memotextBox
             // 
@@ -145,15 +145,6 @@
             this.addbutton.Text = "추가";
             this.addbutton.UseVisualStyleBackColor = true;
             this.addbutton.Click += new System.EventHandler(this.addbutton_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(35, 196);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(724, 242);
-            this.listView1.TabIndex = 16;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // comparebutton
             // 
@@ -204,14 +195,14 @@
             this.changebutton.Text = "수정";
             this.changebutton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // exelbutton
             // 
-            this.button4.Location = new System.Drawing.Point(562, 39);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(208, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "엑셀로다운받기";
-            this.button4.UseVisualStyleBackColor = true;
+            this.exelbutton.Location = new System.Drawing.Point(562, 39);
+            this.exelbutton.Name = "exelbutton";
+            this.exelbutton.Size = new System.Drawing.Size(208, 23);
+            this.exelbutton.TabIndex = 22;
+            this.exelbutton.Text = "엑셀로다운받기";
+            this.exelbutton.UseVisualStyleBackColor = true;
             // 
             // yearcomboBox
             // 
@@ -237,33 +228,42 @@
             this.daycomboBox.Size = new System.Drawing.Size(121, 23);
             this.daycomboBox.TabIndex = 25;
             // 
-            // Form4
+            // moneylistbox
+            // 
+            this.moneylistbox.FormattingEnabled = true;
+            this.moneylistbox.ItemHeight = 15;
+            this.moneylistbox.Location = new System.Drawing.Point(25, 197);
+            this.moneylistbox.Name = "moneylistbox";
+            this.moneylistbox.Size = new System.Drawing.Size(745, 229);
+            this.moneylistbox.TabIndex = 26;
+            // 
+            // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.moneylistbox);
             this.Controls.Add(this.daycomboBox);
             this.Controls.Add(this.monthcomboBox);
             this.Controls.Add(this.yearcomboBox);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.exelbutton);
             this.Controls.Add(this.changebutton);
             this.Controls.Add(this.deletebutton);
             this.Controls.Add(this.searchbutton);
             this.Controls.Add(this.logoutbutton);
             this.Controls.Add(this.comparebutton);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.memotextBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.memolabel);
+            this.Controls.Add(this.moneylabel);
             this.Controls.Add(this.moneytextBox);
             this.Controls.Add(this.expenseradiobutton);
             this.Controls.Add(this.incomeradiobutton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.daylabel);
+            this.Controls.Add(this.monthlabel);
+            this.Controls.Add(this.yearlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form4";
+            this.Name = "home";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,25 +271,25 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label yearlabel;
+        private System.Windows.Forms.Label monthlabel;
+        private System.Windows.Forms.Label daylabel;
         private System.Windows.Forms.RadioButton incomeradiobutton;
         private System.Windows.Forms.RadioButton expenseradiobutton;
         private System.Windows.Forms.TextBox moneytextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label moneylabel;
+        private System.Windows.Forms.Label memolabel;
         private System.Windows.Forms.TextBox memotextBox;
         private System.Windows.Forms.Button addbutton;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button comparebutton;
         private System.Windows.Forms.Button logoutbutton;
         private System.Windows.Forms.Button searchbutton;
         private System.Windows.Forms.Button deletebutton;
         private System.Windows.Forms.Button changebutton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button exelbutton;
         private System.Windows.Forms.ComboBox yearcomboBox;
         private System.Windows.Forms.ComboBox monthcomboBox;
         private System.Windows.Forms.ComboBox daycomboBox;
+        private System.Windows.Forms.ListBox moneylistbox;
     }
 }

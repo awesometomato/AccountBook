@@ -2,7 +2,7 @@
 
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             this.idlabel = new System.Windows.Forms.Label();
             this.loginbutton = new System.Windows.Forms.Button();
             this.cancelbutton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.loginlabel = new System.Windows.Forms.Label();
             this.joinbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -97,16 +97,16 @@ namespace WindowsFormsApp1
             this.cancelbutton.UseVisualStyleBackColor = true;
             this.cancelbutton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label2
+            // loginlabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 20F);
-            this.label2.Location = new System.Drawing.Point(25, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 34);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "로그인";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.loginlabel.AutoSize = true;
+            this.loginlabel.Font = new System.Drawing.Font("굴림", 20F);
+            this.loginlabel.Location = new System.Drawing.Point(25, 18);
+            this.loginlabel.Name = "loginlabel";
+            this.loginlabel.Size = new System.Drawing.Size(117, 34);
+            this.loginlabel.TabIndex = 19;
+            this.loginlabel.Text = "로그인";
+            this.loginlabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // joinbutton
             // 
@@ -119,13 +119,13 @@ namespace WindowsFormsApp1
             this.joinbutton.UseVisualStyleBackColor = true;
             this.joinbutton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 332);
             this.Controls.Add(this.joinbutton);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.loginlabel);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.loginbutton);
             this.Controls.Add(this.idlabel);
@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.passwordtextBox);
             this.Controls.Add(this.idtextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label idlabel;
         private System.Windows.Forms.Button loginbutton;
         private System.Windows.Forms.Button cancelbutton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label loginlabel;
         private System.Windows.Forms.Button joinbutton;
     }
 }
