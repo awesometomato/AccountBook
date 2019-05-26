@@ -39,7 +39,7 @@
             this.agelabel = new System.Windows.Forms.Label();
             this.cancelbutton = new System.Windows.Forms.Button();
             this.passwordchecklabel = new System.Windows.Forms.Label();
-            this.joinpasswordchecktextBox = new System.Windows.Forms.TextBox();
+            this.passwordCheckBox = new System.Windows.Forms.TextBox();
             this.womenradio = new System.Windows.Forms.RadioButton();
             this.menradio = new System.Windows.Forms.RadioButton();
             this.ageBox = new System.Windows.Forms.TextBox();
@@ -146,13 +146,13 @@
             this.passwordchecklabel.TabIndex = 27;
             this.passwordchecklabel.Text = "비밀번호 확인";
             // 
-            // joinpasswordchecktextBox
+            // passwordCheckBox
             // 
-            this.joinpasswordchecktextBox.Location = new System.Drawing.Point(240, 255);
-            this.joinpasswordchecktextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.joinpasswordchecktextBox.Name = "joinpasswordchecktextBox";
-            this.joinpasswordchecktextBox.Size = new System.Drawing.Size(175, 25);
-            this.joinpasswordchecktextBox.TabIndex = 28;
+            this.passwordCheckBox.Location = new System.Drawing.Point(240, 255);
+            this.passwordCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordCheckBox.Name = "passwordCheckBox";
+            this.passwordCheckBox.Size = new System.Drawing.Size(175, 25);
+            this.passwordCheckBox.TabIndex = 28;
             // 
             // womenradio
             // 
@@ -191,7 +191,7 @@
             this.Controls.Add(this.ageBox);
             this.Controls.Add(this.menradio);
             this.Controls.Add(this.womenradio);
-            this.Controls.Add(this.joinpasswordchecktextBox);
+            this.Controls.Add(this.passwordCheckBox);
             this.Controls.Add(this.passwordchecklabel);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.agelabel);
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Label agelabel;
         private System.Windows.Forms.Button cancelbutton;
         private System.Windows.Forms.Label passwordchecklabel;
-        private System.Windows.Forms.TextBox joinpasswordchecktextBox;
+        private System.Windows.Forms.TextBox passwordCheckBox;
         private System.Windows.Forms.RadioButton womenradio;
         private System.Windows.Forms.RadioButton menradio;
         private System.Windows.Forms.TextBox ageBox;

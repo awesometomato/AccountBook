@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
         public Login()
         {
             InitializeComponent();
+
+            passwordBox.PasswordChar = '*';
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (idtextBox.Text.Trim().Length == 0 || passwordtextBox.Text.Trim().Length == 0)
+            if (idtextBox.Text.Trim().Length == 0 || passwordBox.Text.Trim().Length == 0)
                 MessageBox.Show("아이디 혹은 비밀번호를 입력해주세요.", "에러 메시지");
             else
             {
@@ -72,10 +74,10 @@ namespace WindowsFormsApp1
                     MessageBox.Show("해당 아이디가 존재하지 않습니다.", "에러 메시지");
                 else
                 {
-                    if (tmp_user.Password == passwordtextBox.Text)
+                    if (tmp_user.Password == passwordBox.Text)
                     {
                         idtextBox.Text = "";
-                        passwordtextBox.Text = "";
+                        passwordBox.Text = "";
                         PrimaryOperation.currentUser = cnt;
                         home showForm4 = new home();
                         showForm4.ShowDialog();
@@ -83,7 +85,7 @@ namespace WindowsFormsApp1
                     else
                     {
                         MessageBox.Show("비밀번호가 올바르지 않습니다.", "에러 메시지");
-                        passwordtextBox.Text = "";
+                        passwordBox.Text = "";
                     }
                 }
                 

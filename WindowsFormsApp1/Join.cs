@@ -17,6 +17,9 @@ namespace WindowsFormsApp1
         public Join()
         {
             InitializeComponent();
+
+            passwordBox.PasswordChar = '*';
+            passwordCheckBox.PasswordChar = '*';
         }
 
         private void button2_Click(object sender, EventArgs e)
