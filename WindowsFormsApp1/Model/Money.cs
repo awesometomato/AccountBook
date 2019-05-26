@@ -40,5 +40,24 @@ namespace WindowsFormsApp1
             set { day = value; }
         }
 
+        public Money()
+        {
+            kind = "";
+            won = 0;
+            year = 0;
+            month = 0;
+            day = 0;
+        }
+
+        public Money(String kind, int won, int year, int month, int day)
+        {
+            this.kind = kind;
+            this.won = won;
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+
+       
     }
 }

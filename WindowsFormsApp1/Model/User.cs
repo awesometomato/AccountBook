@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         private String name;
         private bool gender;
         private int age;
+        public List<Money> moneylist;
 
         public String Id
         {
@@ -58,6 +59,7 @@ namespace WindowsFormsApp1
             name = "";
             gender = false;
             age = 0;
+            moneylist = new List<Money>();
             total_People++;
         }
 
@@ -68,6 +70,7 @@ namespace WindowsFormsApp1
             this.name = name;
             this.gender = gender;
             this.age = generation;
+            moneylist = new List<Money>();
             total_People++;
         }
 

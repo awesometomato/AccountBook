@@ -14,8 +14,6 @@ namespace WindowsFormsApp1
         [STAThread]
         static void Main()
         {
-            List<User> arr = new List<User>();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());

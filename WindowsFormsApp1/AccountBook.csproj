@@ -45,56 +45,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Expense.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Model\Expense.cs" />
+    <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Join.cs">
+    <Compile Include="View\Join.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Join.Designer.cs">
+    <Compile Include="View\Join.Designer.cs">
       <DependentUpon>Join.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add.cs">
+    <Compile Include="View\Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add.Designer.cs">
+    <Compile Include="View\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="home.cs">
+    <Compile Include="View\home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="home.Designer.cs">
+    <Compile Include="View\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compare.cs">
+    <Compile Include="View\Compare.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compare.Designer.cs">
+    <Compile Include="View\Compare.Designer.cs">
       <DependentUpon>Compare.cs</DependentUpon>
     </Compile>
-    <Compile Include="Income.cs" />
-    <Compile Include="Money.cs" />
-    <Compile Include="PrimaryOperation.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Model\Income.cs" />
+    <Compile Include="Model\Member.cs" />
+    <Compile Include="Model\Money.cs" />
+    <Compile Include="Presenter\PrimaryOperation.cs" />
+    <Compile Include="Presenter\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
-    <EmbeddedResource Include="Compare.resx">
+    <Compile Include="Model\User.cs" />
+    <EmbeddedResource Include="View\Compare.resx">
       <DependentUpon>Compare.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Join.resx">
+    <EmbeddedResource Include="View\Join.resx">
       <DependentUpon>Join.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add.resx">
+    <EmbeddedResource Include="View\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="home.resx">
+    <EmbeddedResource Include="View\home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

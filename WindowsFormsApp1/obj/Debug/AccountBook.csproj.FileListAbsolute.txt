@@ -11,3 +11,16 @@ C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.cspro
 C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj.CoreCompileInputs.cache
 C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\도ㅎ\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csprojResolveAssemblyReference.cache
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Compare.resources
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Join.resources
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Add.resources
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.home.resources
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj.GenerateResource.Cache
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
