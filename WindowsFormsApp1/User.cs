@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MySql.Data.MySqlClient;
+
 namespace WindowsFormsApp1
 {
     class User
@@ -69,6 +71,39 @@ namespace WindowsFormsApp1
             this.gender = gender;
             this.age = generation;
             total_People++;
+        }
+
+        public string AddUser(string id, string password, string gender, string name, string age)
+        {
+            MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+            string insertQuery = "INSERT INTO member_tb (id,password,gender,name,age) VALUES('" + id + "','" + password + "'," + gender + ",'" + name + "'," + age + ")";
+            string str="error";
+
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+
+            try
+            {
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    return "정상적으로 가입되었습니다";
+                }
+                else
+                {
+                    return "오류!!";
+                }
+            }
+            catch(Exception ex)
+            {
+                if (ex.Message == "Duplicate entry '" + id + "' for key 'PRIMARY")
+                {
+                    return "이미존재하는 아이디 입니다";
+                }
+                return ex.Message;
+            }finally
+            {
+                connection.Close();
+            }
         }
 
         ~User()

@@ -30,19 +30,19 @@
         {
             this.idlabel = new System.Windows.Forms.Label();
             this.passwordlabel = new System.Windows.Forms.Label();
-            this.idtextBox = new System.Windows.Forms.TextBox();
-            this.joinidtextbox = new System.Windows.Forms.TextBox();
-            this.okbutton = new System.Windows.Forms.Button();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.idBox = new System.Windows.Forms.TextBox();
+            this.submitBtn = new System.Windows.Forms.Button();
             this.Joinlabel = new System.Windows.Forms.Label();
             this.namelabel = new System.Windows.Forms.Label();
-            this.joinpasswordtextBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
             this.agelabel = new System.Windows.Forms.Label();
             this.cancelbutton = new System.Windows.Forms.Button();
             this.passwordchecklabel = new System.Windows.Forms.Label();
             this.joinpasswordchecktextBox = new System.Windows.Forms.TextBox();
             this.womenradio = new System.Windows.Forms.RadioButton();
             this.menradio = new System.Windows.Forms.RadioButton();
-            this.agetextBox = new System.Windows.Forms.TextBox();
+            this.ageBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // idlabel
@@ -63,32 +63,32 @@
             this.passwordlabel.TabIndex = 2;
             this.passwordlabel.Text = "비밀번호";
             // 
-            // idtextBox
+            // nameBox
             // 
-            this.idtextBox.Location = new System.Drawing.Point(240, 96);
-            this.idtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.idtextBox.Name = "idtextBox";
-            this.idtextBox.Size = new System.Drawing.Size(100, 25);
-            this.idtextBox.TabIndex = 3;
+            this.nameBox.Location = new System.Drawing.Point(240, 96);
+            this.nameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(100, 25);
+            this.nameBox.TabIndex = 3;
             // 
-            // joinidtextbox
+            // idBox
             // 
-            this.joinidtextbox.Location = new System.Drawing.Point(240, 176);
-            this.joinidtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.joinidtextbox.Name = "joinidtextbox";
-            this.joinidtextbox.Size = new System.Drawing.Size(175, 25);
-            this.joinidtextbox.TabIndex = 4;
+            this.idBox.Location = new System.Drawing.Point(240, 176);
+            this.idBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(175, 25);
+            this.idBox.TabIndex = 4;
             // 
-            // okbutton
+            // submitBtn
             // 
-            this.okbutton.Location = new System.Drawing.Point(240, 308);
-            this.okbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.okbutton.Name = "okbutton";
-            this.okbutton.Size = new System.Drawing.Size(75, 22);
-            this.okbutton.TabIndex = 5;
-            this.okbutton.Text = "확인";
-            this.okbutton.UseVisualStyleBackColor = true;
-            this.okbutton.Click += new System.EventHandler(this.button1_Click);
+            this.submitBtn.Location = new System.Drawing.Point(240, 308);
+            this.submitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(75, 22);
+            this.submitBtn.TabIndex = 5;
+            this.submitBtn.Text = "확인";
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // Joinlabel
             // 
@@ -109,13 +109,13 @@
             this.namelabel.TabIndex = 20;
             this.namelabel.Text = "이름";
             // 
-            // joinpasswordtextBox
+            // passwordBox
             // 
-            this.joinpasswordtextBox.Location = new System.Drawing.Point(240, 218);
-            this.joinpasswordtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.joinpasswordtextBox.Name = "joinpasswordtextBox";
-            this.joinpasswordtextBox.Size = new System.Drawing.Size(175, 25);
-            this.joinpasswordtextBox.TabIndex = 21;
+            this.passwordBox.Location = new System.Drawing.Point(240, 218);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(175, 25);
+            this.passwordBox.TabIndex = 21;
             // 
             // agelabel
             // 
@@ -176,31 +176,31 @@
             this.menradio.Text = "남자";
             this.menradio.UseVisualStyleBackColor = true;
             // 
-            // agetextBox
+            // ageBox
             // 
-            this.agetextBox.Location = new System.Drawing.Point(240, 134);
-            this.agetextBox.Name = "agetextBox";
-            this.agetextBox.Size = new System.Drawing.Size(100, 25);
-            this.agetextBox.TabIndex = 31;
+            this.ageBox.Location = new System.Drawing.Point(240, 134);
+            this.ageBox.Name = "ageBox";
+            this.ageBox.Size = new System.Drawing.Size(100, 25);
+            this.ageBox.TabIndex = 31;
             // 
             // Join
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 362);
-            this.Controls.Add(this.agetextBox);
+            this.Controls.Add(this.ageBox);
             this.Controls.Add(this.menradio);
             this.Controls.Add(this.womenradio);
             this.Controls.Add(this.joinpasswordchecktextBox);
             this.Controls.Add(this.passwordchecklabel);
             this.Controls.Add(this.cancelbutton);
             this.Controls.Add(this.agelabel);
-            this.Controls.Add(this.joinpasswordtextBox);
+            this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.Joinlabel);
-            this.Controls.Add(this.okbutton);
-            this.Controls.Add(this.joinidtextbox);
-            this.Controls.Add(this.idtextBox);
+            this.Controls.Add(this.submitBtn);
+            this.Controls.Add(this.idBox);
+            this.Controls.Add(this.nameBox);
             this.Controls.Add(this.passwordlabel);
             this.Controls.Add(this.idlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -217,18 +217,18 @@
         
         private System.Windows.Forms.Label idlabel;
         private System.Windows.Forms.Label passwordlabel;
-        private System.Windows.Forms.TextBox idtextBox;
-        private System.Windows.Forms.TextBox joinidtextbox;
-        private System.Windows.Forms.Button okbutton;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.TextBox idBox;
+        private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Label Joinlabel;
         private System.Windows.Forms.Label namelabel;
-        private System.Windows.Forms.TextBox joinpasswordtextBox;
+        private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Label agelabel;
         private System.Windows.Forms.Button cancelbutton;
         private System.Windows.Forms.Label passwordchecklabel;
         private System.Windows.Forms.TextBox joinpasswordchecktextBox;
         private System.Windows.Forms.RadioButton womenradio;
         private System.Windows.Forms.RadioButton menradio;
-        private System.Windows.Forms.TextBox agetextBox;
+        private System.Windows.Forms.TextBox ageBox;
     }
 }

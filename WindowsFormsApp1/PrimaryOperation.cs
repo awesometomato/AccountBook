@@ -20,6 +20,12 @@ namespace WindowsFormsApp1
             }
             return 0;
         }
+
+        public string Join_Users(string id, string password, string gender, string name, string age)
+        {
+            User add_user = new User();
+            return add_user.AddUser(id, password, gender, name, age);
+        }
        
     }
 }

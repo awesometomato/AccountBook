@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class Join : Form
     {
+        private PrimaryOperation presenter = new PrimaryOperation();
+
         public Join()
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             int age;
 
             if (idtextBox.Text.Trim().Length == 0 || joinidtextbox.Text.Trim().Length == 0 || joinpasswordtextBox.Text.Trim().Length == 0 ||
@@ -70,7 +73,20 @@ namespace WindowsFormsApp1
                 MessageBox.Show("회원가입이 완료되었습니다.", "회원가입 완료");
                 this.Close();
             }
+            */
+            string gender = "3";
+            string str = "";
+            if (womenradio.Checked == true) gender = "1";
+            else if (menradio.Checked == true) gender = "0";
 
+            str = presenter.Join_Users(idBox.Text, passwordBox.Text, gender, nameBox.Text, ageBox.Text);
+
+            MessageBox.Show(str);
+            if (str == "정상적으로 가입되었습니다.")
+            {
+                Join form = new Join();
+                form.Close();
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
