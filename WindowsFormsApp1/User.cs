@@ -75,9 +75,19 @@ namespace WindowsFormsApp1
 
         public string AddUser(string id, string password, string gender, string name, string age)
         {
+            if (id == "" || password == "" || gender == "3" || name== "" || age == "")
+            {
+                return "모든 항목을 입력해주세요.";
+            }
+
+            int i = 0;
+            if (int.TryParse(age, out i) == false)
+            {
+                return "나이는 숫자를 입력해주세요";
+            }
+
             MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
             string insertQuery = "INSERT INTO member_tb (id,password,gender,name,age) VALUES('" + id + "','" + password + "'," + gender + ",'" + name + "'," + age + ")";
-            string str="error";
 
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);

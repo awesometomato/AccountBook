@@ -82,11 +82,7 @@ namespace WindowsFormsApp1
             str = presenter.Join_Users(idBox.Text, passwordBox.Text, gender, nameBox.Text, ageBox.Text);
 
             MessageBox.Show(str);
-            if (str == "정상적으로 가입되었습니다.")
-            {
-                Join form = new Join();
-                form.Close();
-            }
+            if (str == "정상적으로 가입되었습니다") this.Close();
         }
 
         private void Form2_Load(object sender, EventArgs e)
