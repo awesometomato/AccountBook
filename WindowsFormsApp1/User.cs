@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             total_People++;
         }
 
-        public string AddUser(string id, string password, string gender, string name, string age)
+        public string AddUser(string id, string password, string passwordCheck, string gender, string name, string age)
         {
             if (id == "" || password == "" || gender == "3" || name== "" || age == "")
             {
@@ -85,6 +85,9 @@ namespace WindowsFormsApp1
             {
                 return "나이는 숫자를 입력해주세요";
             }
+
+            if (password == passwordCheck)
+                return "비밀번호가 일치하지 않습니다.";
 
             MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
             string insertQuery = "INSERT INTO member_tb (id,password,gender,name,age) VALUES('" + id + "','" + password + "'," + gender + ",'" + name + "'," + age + ")";
