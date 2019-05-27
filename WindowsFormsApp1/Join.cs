@@ -12,7 +12,6 @@ namespace WindowsFormsApp1
 {
     public partial class Join : Form
     {
-        private PrimaryOperation presenter = new PrimaryOperation();
 
         public Join()
         {
@@ -82,7 +81,7 @@ namespace WindowsFormsApp1
             if (womenradio.Checked == true) gender = "1";
             else if (menradio.Checked == true) gender = "0";
 
-            str = presenter.Join_Users(idBox.Text, passwordBox.Text, passwordCheckBox.Text, gender, nameBox.Text, ageBox.Text);
+            str = PrimaryOperation.Join_Users(idBox.Text, passwordBox.Text, passwordCheckBox.Text, gender, nameBox.Text, ageBox.Text);
 
             MessageBox.Show(str);
             if (str == "정상적으로 가입되었습니다") this.Close();

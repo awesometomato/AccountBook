@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             if (idtextBox.Text.Trim().Length == 0 || passwordBox.Text.Trim().Length == 0)
                 MessageBox.Show("아이디 혹은 비밀번호를 입력해주세요.", "에러 메시지");
             else
@@ -89,7 +90,15 @@ namespace WindowsFormsApp1
                     }
                 }
                 
+            }*/
+            string str="?";
+            str = PrimaryOperation.Loin_Users(idBox.Text, passwordBox.Text);
+            if (str == "login")
+            {
+                home showHome = new home();
+                showHome.ShowDialog();
             }
+            else MessageBox.Show(str);
 
         }
 

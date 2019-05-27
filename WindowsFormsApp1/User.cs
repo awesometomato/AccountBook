@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace WindowsFormsApp1
 {
@@ -116,6 +117,44 @@ namespace WindowsFormsApp1
             }finally
             {
                 connection.Close();
+            }
+        }
+
+
+        public string Login(string id, string password)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+
+                DataSet ds = new DataSet();
+
+                string sql = "SELECT id,password FROM member_tb WHERE id = '" + id + "'";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(sql, connection);
+                adpt.Fill(ds, "member_tb");
+                if (ds.Tables.Count == 0) return "아이디가 존재하지 않습니다.";
+                else if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+                    if (row["password"].ToString() == password)
+                    {
+                        PrimaryOperation.currenID = row["id"].ToString();
+                        return "login";
+                    }
+                    else return "비밀번호가 일치하지 않습니다.";
+                }
+                else return "음수 오류";
+            }catch (Exception ex)
+            {
+                if (ex.Message == "위치 0에 행이 없습니다.")
+                {
+                    return "아이디가 존재하지 않습니다.";
+                }
+                return ex.Message;
+            }finally
+            {
+
             }
         }
 
