@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             if (password == passwordCheck)
                 return "비밀번호가 일치하지 않습니다.";
 
-            MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+            MySqlConnection connection = new MySqlConnection("Server=192.168.35.201;Database=project;Uid=root;Pwd=s17011564!;");
             string insertQuery = "INSERT INTO member_tb (id,password,gender,name,age) VALUES('" + id + "','" + password + "'," + gender + ",'" + name + "'," + age + ")";
 
             connection.Open();
@@ -125,7 +125,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+                MySqlConnection connection = new MySqlConnection("Server=192.168.35.201;Database=project;Uid=root;Pwd=s17011564!;");
 
                 DataSet ds = new DataSet();
 
