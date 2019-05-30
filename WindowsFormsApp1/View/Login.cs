@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
             str = PrimaryOperation.Loin_User(idBox.Text, passwordBox.Text);
             if (str == "login")
             {
+                idBox.Text = ""; passwordBox.Text = "";
                 home showHome = new home();
                 showHome.ShowDialog();
             }

@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             prepare_comboBox();
+            expenseBtn.Checked = false;
+            incomeBtn.Checked = false;
         }
         public void prepare_comboBox()
         {
