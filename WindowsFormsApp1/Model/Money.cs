@@ -76,8 +76,8 @@ namespace WindowsFormsApp1
             if (day.Length == 1) { day = "0" + day; }
             date = year + month + day;
 
-            MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
-            string insertQuery = "INSERT INTO money_tb (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentID["id"].ToString() + "'," + money + "," + sign + "," + date + ",'" + memo + "')";
+            MySqlConnection connection = new MySqlConnection("Server=192.168.35.178;Database=accountbook;Uid=root;Pwd=s17011564!;");
+            string insertQuery = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentID["id"].ToString() + "'," + money + "," + sign + "," + date + ",'" + memo + "')";
 
             connection.Open();
             MySqlCommand command = new MySqlCommand(insertQuery, connection);

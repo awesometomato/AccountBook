@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
             prepare_comboBox();
             expenseBtn.Checked = false;
             incomeBtn.Checked = false;
+
+            nameLabel.Text = PrimaryOperation.currentID["name"].ToString();
         }
         public void prepare_comboBox()
         {

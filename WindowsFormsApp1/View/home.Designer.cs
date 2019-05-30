@@ -48,6 +48,7 @@
             this.monthBox = new System.Windows.Forms.ComboBox();
             this.dayBox = new System.Windows.Forms.ComboBox();
             this.moneylistbox = new System.Windows.Forms.ListBox();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // yearlabel
@@ -237,11 +238,20 @@
             this.moneylistbox.Size = new System.Drawing.Size(745, 229);
             this.moneylistbox.TabIndex = 26;
             // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(162, 12);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(0, 15);
+            this.nameLabel.TabIndex = 27;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.moneylistbox);
             this.Controls.Add(this.dayBox);
             this.Controls.Add(this.monthBox);
@@ -291,5 +301,6 @@
         private System.Windows.Forms.ComboBox monthBox;
         private System.Windows.Forms.ComboBox dayBox;
         private System.Windows.Forms.ListBox moneylistbox;
+        private System.Windows.Forms.Label nameLabel;
     }
 }
