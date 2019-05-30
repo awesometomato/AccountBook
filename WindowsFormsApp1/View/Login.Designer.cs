@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(177, 25);
             this.idBox.TabIndex = 4;
-            this.idBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // passwordBox
             // 
@@ -95,7 +94,7 @@ namespace WindowsFormsApp1
             this.cancelbutton.TabIndex = 16;
             this.cancelbutton.Text = "취소";
             this.cancelbutton.UseVisualStyleBackColor = true;
-            this.cancelbutton.Click += new System.EventHandler(this.button2_Click);
+            this.cancelbutton.Click += new System.EventHandler(this.loginbutton_Click);
             // 
             // loginlabel
             // 

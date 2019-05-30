@@ -26,16 +26,6 @@ namespace WindowsFormsApp1
             Application.ExitThread();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -50,12 +40,6 @@ namespace WindowsFormsApp1
         {
             Join showForm2 = new Join();
             showForm2.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)

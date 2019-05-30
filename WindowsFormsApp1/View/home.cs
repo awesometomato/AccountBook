@@ -19,54 +19,54 @@ namespace WindowsFormsApp1
         }
         public void prepare_comboBox()
         {
-            yearcomboBox.Items.Add("2019");
-            yearcomboBox.Items.Add("2020");
-            yearcomboBox.Items.Add("2021");
+            yearBox.Items.Add("2019");
+            yearBox.Items.Add("2020");
+            yearBox.Items.Add("2021");
 
-            monthcomboBox.Items.Add("1");
-            monthcomboBox.Items.Add("2");
-            monthcomboBox.Items.Add("3");
-            monthcomboBox.Items.Add("4");
-            monthcomboBox.Items.Add("5");
-            monthcomboBox.Items.Add("6");
-            monthcomboBox.Items.Add("7");
-            monthcomboBox.Items.Add("8");
-            monthcomboBox.Items.Add("9");
-            monthcomboBox.Items.Add("10");
-            monthcomboBox.Items.Add("11");
-            monthcomboBox.Items.Add("12");
+            monthBox.Items.Add("1");
+            monthBox.Items.Add("2");
+            monthBox.Items.Add("3");
+            monthBox.Items.Add("4");
+            monthBox.Items.Add("5");
+            monthBox.Items.Add("6");
+            monthBox.Items.Add("7");
+            monthBox.Items.Add("8");
+            monthBox.Items.Add("9");
+            monthBox.Items.Add("10");
+            monthBox.Items.Add("11");
+            monthBox.Items.Add("12");
 
-            daycomboBox.Items.Add("1");
-            daycomboBox.Items.Add("2");
-            daycomboBox.Items.Add("3");
-            daycomboBox.Items.Add("4");
-            daycomboBox.Items.Add("5");
-            daycomboBox.Items.Add("6");
-            daycomboBox.Items.Add("7");
-            daycomboBox.Items.Add("8");
-            daycomboBox.Items.Add("9");
-            daycomboBox.Items.Add("10");
-            daycomboBox.Items.Add("11");
-            daycomboBox.Items.Add("12");
-            daycomboBox.Items.Add("13");
-            daycomboBox.Items.Add("14");
-            daycomboBox.Items.Add("15");
-            daycomboBox.Items.Add("16");
-            daycomboBox.Items.Add("17");
-            daycomboBox.Items.Add("18");
-            daycomboBox.Items.Add("19");
-            daycomboBox.Items.Add("20");
-            daycomboBox.Items.Add("21");
-            daycomboBox.Items.Add("22");
-            daycomboBox.Items.Add("23");
-            daycomboBox.Items.Add("24");
-            daycomboBox.Items.Add("25");
-            daycomboBox.Items.Add("26");
-            daycomboBox.Items.Add("27");
-            daycomboBox.Items.Add("28");
-            daycomboBox.Items.Add("29");
-            daycomboBox.Items.Add("30");
-            daycomboBox.Items.Add("31");
+            dayBox.Items.Add("1");
+            dayBox.Items.Add("2");
+            dayBox.Items.Add("3");
+            dayBox.Items.Add("4");
+            dayBox.Items.Add("5");
+            dayBox.Items.Add("6");
+            dayBox.Items.Add("7");
+            dayBox.Items.Add("8");
+            dayBox.Items.Add("9");
+            dayBox.Items.Add("10");
+            dayBox.Items.Add("11");
+            dayBox.Items.Add("12");
+            dayBox.Items.Add("13");
+            dayBox.Items.Add("14");
+            dayBox.Items.Add("15");
+            dayBox.Items.Add("16");
+            dayBox.Items.Add("17");
+            dayBox.Items.Add("18");
+            dayBox.Items.Add("19");
+            dayBox.Items.Add("20");
+            dayBox.Items.Add("21");
+            dayBox.Items.Add("22");
+            dayBox.Items.Add("23");
+            dayBox.Items.Add("24");
+            dayBox.Items.Add("25");
+            dayBox.Items.Add("26");
+            dayBox.Items.Add("27");
+            dayBox.Items.Add("28");
+            dayBox.Items.Add("29");
+            dayBox.Items.Add("30");
+            dayBox.Items.Add("31");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -75,16 +75,39 @@ namespace WindowsFormsApp1
             showForm5.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // logoutBtn
         {
             PrimaryOperation.currentUser = -1;
+            PrimaryOperation.currentID = null; // db
             this.Close();
         }
 
         private void addbutton_Click(object sender, EventArgs e)
         {
+            /*
             Add showForm3 = new Add();
             showForm3.ShowDialog();
+            */
+            string str;
+
+            string sign = "2";
+            if (expenseBtn.Checked == true) { sign = "0"; }
+            else if (incomeBtn.Checked == true) { sign = "1"; }
+
+            str = PrimaryOperation.AddMoney(moneyBox.Text, sign, yearBox.Text, monthBox.Text, dayBox.Text, memoBox.Text);
+
+            MessageBox.Show(str);
+
+            // 초기화
+            if (str == "정상적으로 입력되었습니다.")
+            {
+                yearBox.Text = "";
+                monthBox.Text = "";
+                dayBox.Text = "";
+                memoBox.Text = "";
+                moneyBox.Text = "";
+                expenseBtn.Checked = false; incomeBtn.Checked = false;
+            }
         }
     }
 }

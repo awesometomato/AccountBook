@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
         }
 
         //money 항목 추가 함수
+        
         public static bool addItem(String kind, String year, String month, String day, String won, bool r1, bool r2)
         {
             int w;
@@ -55,6 +56,13 @@ namespace WindowsFormsApp1
             }
             return false;
         }
+        
+        public static string AddMoney(string money, string sign, string year, string month, string day, string memo)
+        {
+            Money m = new Money();
+            return m.AddMoney(money, sign, year, month, day, memo);
+        }
+        
 
         //Join - User
         public static string Join_User(string id, string password, string passwordCheck, string name, string gender, string age)

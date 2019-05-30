@@ -31,12 +31,12 @@
             this.yearlabel = new System.Windows.Forms.Label();
             this.monthlabel = new System.Windows.Forms.Label();
             this.daylabel = new System.Windows.Forms.Label();
-            this.incomeradiobutton = new System.Windows.Forms.RadioButton();
-            this.expenseradiobutton = new System.Windows.Forms.RadioButton();
-            this.moneytextBox = new System.Windows.Forms.TextBox();
+            this.incomeBtn = new System.Windows.Forms.RadioButton();
+            this.expenseBtn = new System.Windows.Forms.RadioButton();
+            this.moneyBox = new System.Windows.Forms.TextBox();
             this.moneylabel = new System.Windows.Forms.Label();
             this.memolabel = new System.Windows.Forms.Label();
-            this.memotextBox = new System.Windows.Forms.TextBox();
+            this.memoBox = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
             this.comparebutton = new System.Windows.Forms.Button();
             this.logoutbutton = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.deletebutton = new System.Windows.Forms.Button();
             this.changebutton = new System.Windows.Forms.Button();
             this.exelbutton = new System.Windows.Forms.Button();
-            this.yearcomboBox = new System.Windows.Forms.ComboBox();
-            this.monthcomboBox = new System.Windows.Forms.ComboBox();
-            this.daycomboBox = new System.Windows.Forms.ComboBox();
+            this.yearBox = new System.Windows.Forms.ComboBox();
+            this.monthBox = new System.Windows.Forms.ComboBox();
+            this.dayBox = new System.Windows.Forms.ComboBox();
             this.moneylistbox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -77,37 +77,37 @@
             this.daylabel.TabIndex = 5;
             this.daylabel.Text = "일";
             // 
-            // incomeradiobutton
+            // incomeBtn
             // 
-            this.incomeradiobutton.AutoSize = true;
-            this.incomeradiobutton.Location = new System.Drawing.Point(657, 90);
-            this.incomeradiobutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.incomeradiobutton.Name = "incomeradiobutton";
-            this.incomeradiobutton.Size = new System.Drawing.Size(58, 19);
-            this.incomeradiobutton.TabIndex = 6;
-            this.incomeradiobutton.TabStop = true;
-            this.incomeradiobutton.Text = "수입";
-            this.incomeradiobutton.UseVisualStyleBackColor = true;
+            this.incomeBtn.AutoSize = true;
+            this.incomeBtn.Location = new System.Drawing.Point(657, 90);
+            this.incomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.incomeBtn.Name = "incomeBtn";
+            this.incomeBtn.Size = new System.Drawing.Size(58, 19);
+            this.incomeBtn.TabIndex = 6;
+            this.incomeBtn.TabStop = true;
+            this.incomeBtn.Text = "수입";
+            this.incomeBtn.UseVisualStyleBackColor = true;
             // 
-            // expenseradiobutton
+            // expenseBtn
             // 
-            this.expenseradiobutton.AutoSize = true;
-            this.expenseradiobutton.Location = new System.Drawing.Point(562, 90);
-            this.expenseradiobutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.expenseradiobutton.Name = "expenseradiobutton";
-            this.expenseradiobutton.Size = new System.Drawing.Size(58, 19);
-            this.expenseradiobutton.TabIndex = 7;
-            this.expenseradiobutton.TabStop = true;
-            this.expenseradiobutton.Text = "지출";
-            this.expenseradiobutton.UseVisualStyleBackColor = true;
+            this.expenseBtn.AutoSize = true;
+            this.expenseBtn.Location = new System.Drawing.Point(562, 90);
+            this.expenseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.expenseBtn.Name = "expenseBtn";
+            this.expenseBtn.Size = new System.Drawing.Size(58, 19);
+            this.expenseBtn.TabIndex = 7;
+            this.expenseBtn.TabStop = true;
+            this.expenseBtn.Text = "지출";
+            this.expenseBtn.UseVisualStyleBackColor = true;
             // 
-            // moneytextBox
+            // moneyBox
             // 
-            this.moneytextBox.Location = new System.Drawing.Point(363, 132);
-            this.moneytextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.moneytextBox.Name = "moneytextBox";
-            this.moneytextBox.Size = new System.Drawing.Size(100, 25);
-            this.moneytextBox.TabIndex = 8;
+            this.moneyBox.Location = new System.Drawing.Point(363, 132);
+            this.moneyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.moneyBox.Name = "moneyBox";
+            this.moneyBox.Size = new System.Drawing.Size(100, 25);
+            this.moneyBox.TabIndex = 8;
             // 
             // moneylabel
             // 
@@ -127,13 +127,13 @@
             this.memolabel.TabIndex = 10;
             this.memolabel.Text = "메모";
             // 
-            // memotextBox
+            // memoBox
             // 
-            this.memotextBox.Location = new System.Drawing.Point(113, 132);
-            this.memotextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.memotextBox.Name = "memotextBox";
-            this.memotextBox.Size = new System.Drawing.Size(191, 25);
-            this.memotextBox.TabIndex = 11;
+            this.memoBox.Location = new System.Drawing.Point(113, 132);
+            this.memoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.memoBox.Name = "memoBox";
+            this.memoBox.Size = new System.Drawing.Size(191, 25);
+            this.memoBox.TabIndex = 11;
             // 
             // addbutton
             // 
@@ -204,29 +204,29 @@
             this.exelbutton.Text = "엑셀로다운받기";
             this.exelbutton.UseVisualStyleBackColor = true;
             // 
-            // yearcomboBox
+            // yearBox
             // 
-            this.yearcomboBox.FormattingEnabled = true;
-            this.yearcomboBox.Location = new System.Drawing.Point(35, 87);
-            this.yearcomboBox.Name = "yearcomboBox";
-            this.yearcomboBox.Size = new System.Drawing.Size(121, 23);
-            this.yearcomboBox.TabIndex = 23;
+            this.yearBox.FormattingEnabled = true;
+            this.yearBox.Location = new System.Drawing.Point(35, 87);
+            this.yearBox.Name = "yearBox";
+            this.yearBox.Size = new System.Drawing.Size(121, 23);
+            this.yearBox.TabIndex = 23;
             // 
-            // monthcomboBox
+            // monthBox
             // 
-            this.monthcomboBox.FormattingEnabled = true;
-            this.monthcomboBox.Location = new System.Drawing.Point(195, 89);
-            this.monthcomboBox.Name = "monthcomboBox";
-            this.monthcomboBox.Size = new System.Drawing.Size(121, 23);
-            this.monthcomboBox.TabIndex = 24;
+            this.monthBox.FormattingEnabled = true;
+            this.monthBox.Location = new System.Drawing.Point(195, 89);
+            this.monthBox.Name = "monthBox";
+            this.monthBox.Size = new System.Drawing.Size(121, 23);
+            this.monthBox.TabIndex = 24;
             // 
-            // daycomboBox
+            // dayBox
             // 
-            this.daycomboBox.FormattingEnabled = true;
-            this.daycomboBox.Location = new System.Drawing.Point(357, 90);
-            this.daycomboBox.Name = "daycomboBox";
-            this.daycomboBox.Size = new System.Drawing.Size(121, 23);
-            this.daycomboBox.TabIndex = 25;
+            this.dayBox.FormattingEnabled = true;
+            this.dayBox.Location = new System.Drawing.Point(357, 90);
+            this.dayBox.Name = "dayBox";
+            this.dayBox.Size = new System.Drawing.Size(121, 23);
+            this.dayBox.TabIndex = 25;
             // 
             // moneylistbox
             // 
@@ -243,9 +243,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.moneylistbox);
-            this.Controls.Add(this.daycomboBox);
-            this.Controls.Add(this.monthcomboBox);
-            this.Controls.Add(this.yearcomboBox);
+            this.Controls.Add(this.dayBox);
+            this.Controls.Add(this.monthBox);
+            this.Controls.Add(this.yearBox);
             this.Controls.Add(this.exelbutton);
             this.Controls.Add(this.changebutton);
             this.Controls.Add(this.deletebutton);
@@ -253,12 +253,12 @@
             this.Controls.Add(this.logoutbutton);
             this.Controls.Add(this.comparebutton);
             this.Controls.Add(this.addbutton);
-            this.Controls.Add(this.memotextBox);
+            this.Controls.Add(this.memoBox);
             this.Controls.Add(this.memolabel);
             this.Controls.Add(this.moneylabel);
-            this.Controls.Add(this.moneytextBox);
-            this.Controls.Add(this.expenseradiobutton);
-            this.Controls.Add(this.incomeradiobutton);
+            this.Controls.Add(this.moneyBox);
+            this.Controls.Add(this.expenseBtn);
+            this.Controls.Add(this.incomeBtn);
             this.Controls.Add(this.daylabel);
             this.Controls.Add(this.monthlabel);
             this.Controls.Add(this.yearlabel);
@@ -274,12 +274,12 @@
         private System.Windows.Forms.Label yearlabel;
         private System.Windows.Forms.Label monthlabel;
         private System.Windows.Forms.Label daylabel;
-        private System.Windows.Forms.RadioButton incomeradiobutton;
-        private System.Windows.Forms.RadioButton expenseradiobutton;
-        private System.Windows.Forms.TextBox moneytextBox;
+        private System.Windows.Forms.RadioButton incomeBtn;
+        private System.Windows.Forms.RadioButton expenseBtn;
+        private System.Windows.Forms.TextBox moneyBox;
         private System.Windows.Forms.Label moneylabel;
         private System.Windows.Forms.Label memolabel;
-        private System.Windows.Forms.TextBox memotextBox;
+        private System.Windows.Forms.TextBox memoBox;
         private System.Windows.Forms.Button addbutton;
         private System.Windows.Forms.Button comparebutton;
         private System.Windows.Forms.Button logoutbutton;
@@ -287,9 +287,9 @@
         private System.Windows.Forms.Button deletebutton;
         private System.Windows.Forms.Button changebutton;
         private System.Windows.Forms.Button exelbutton;
-        private System.Windows.Forms.ComboBox yearcomboBox;
-        private System.Windows.Forms.ComboBox monthcomboBox;
-        private System.Windows.Forms.ComboBox daycomboBox;
+        private System.Windows.Forms.ComboBox yearBox;
+        private System.Windows.Forms.ComboBox monthBox;
+        private System.Windows.Forms.ComboBox dayBox;
         private System.Windows.Forms.ListBox moneylistbox;
     }
 }
