@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data;
+
 namespace WindowsFormsApp1
 {
     class PrimaryOperation
     {
         public static int currentUser = -1;
+        public static DataRow currentID = null;
 
         //회원가입할때 중복된 아이디가 체크하는 함수
         //db에서 중복 검사할 수 있으면 삭제해도 됨
@@ -53,72 +56,18 @@ namespace WindowsFormsApp1
             return false;
         }
 
-        //회원가입 함수
-        public static bool addUser(String name, String age, String id, String password, String passwordcheck, bool women, bool men)
+        //Join - User
+        public static string Join_User(string id, string password, string passwordCheck, string name, string gender, string age)
         {
-            int a;
-
-            if (name.Trim().Length == 0 || id.Trim().Length == 0 || password.Trim().Length == 0 ||
-                passwordcheck.Trim().Length == 0 || age.Trim().Length == 0)
-                MessageBox.Show("입력되지 않은 빈 칸이 있습니다.", "에러 메시지");
-            else if (women == false && men == false)
-                MessageBox.Show("성별을 선택해주세요.", "에러 메시지");
-            else if (PrimaryOperation.redundancyCheck(id) == -1)
-                MessageBox.Show("해당 아이디가 이미 존재합니다", "에러 메시지");
-            else if (int.TryParse(age, out a) == false)
-                MessageBox.Show("나이는 자연수만 입력해주세요.", "에러 메시지");
-            else if (password != passwordcheck)
-                MessageBox.Show("비밀번호가 일치하지 않습니다.", "에러 메시지");
-            else
-            {
-                User member = new User();
-                member.Name = name;
-                member.Id = id;
-                member.Password = password;
-                member.Age = a;
-                if (women == true)
-                    member.Gender = true;
-                else
-                    member.Gender = false;
-
-                Member.list.Add(member);
-
-                MessageBox.Show("회원가입이 완료되었습니다.", "회원가입 완료");
-                return true;
-            }
-            return false;
+            User user = new User();
+            return user.AddUser(id, password, passwordCheck, name, gender, age);
         }
 
-        //로그인 함수
-        public static bool logincheck(String id, String password)
+        //Loin - User
+        public static string Loin_User(string id, string password)
         {
-            if (id.Trim().Length == 0 || password.Trim().Length == 0)
-                MessageBox.Show("아이디 혹은 비밀번호를 입력해주세요.", "에러 메시지");
-            else
-            {
-                User tmp_user = null;
-                int cnt = 0;
-                foreach (var item in Member.list)
-                {
-                    if (item.Id == id)
-                    {
-                        tmp_user = item;
-                        break;
-                    }
-                    cnt++;
-                }
-
-                if (tmp_user == null)
-                    MessageBox.Show("해당 아이디가 존재하지 않습니다.", "에러 메시지");
-                else if (tmp_user.Password != password)
-                    MessageBox.Show("비밀번호가 올바르지 않습니다.", "에러 메시지");
-                else
-                {
-                    PrimaryOperation.currentUser = cnt;
-                    return true;
-                }
-            }
-            return false;
+            User user = new User();
+            return user.SelectUser(id, password);
         }
     }
 }

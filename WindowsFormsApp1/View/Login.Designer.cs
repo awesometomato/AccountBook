@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.idtextBox = new System.Windows.Forms.TextBox();
-            this.passwordtextBox = new System.Windows.Forms.TextBox();
+            this.idBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
             this.passwordlabel = new System.Windows.Forms.Label();
             this.idlabel = new System.Windows.Forms.Label();
             this.loginbutton = new System.Windows.Forms.Button();
@@ -40,22 +40,22 @@ namespace WindowsFormsApp1
             this.joinbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // idtextBox
+            // idBox
             // 
-            this.idtextBox.Location = new System.Drawing.Point(195, 110);
-            this.idtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.idtextBox.Name = "idtextBox";
-            this.idtextBox.Size = new System.Drawing.Size(177, 25);
-            this.idtextBox.TabIndex = 4;
-            this.idtextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.idBox.Location = new System.Drawing.Point(195, 110);
+            this.idBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(177, 25);
+            this.idBox.TabIndex = 4;
+            this.idBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // passwordtextBox
+            // passwordBox
             // 
-            this.passwordtextBox.Location = new System.Drawing.Point(195, 170);
-            this.passwordtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.passwordtextBox.Name = "passwordtextBox";
-            this.passwordtextBox.Size = new System.Drawing.Size(177, 25);
-            this.passwordtextBox.TabIndex = 5;
+            this.passwordBox.Location = new System.Drawing.Point(195, 170);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(177, 25);
+            this.passwordBox.TabIndex = 5;
             // 
             // passwordlabel
             // 
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             this.loginbutton.TabIndex = 15;
             this.loginbutton.Text = "로그인";
             this.loginbutton.UseVisualStyleBackColor = true;
-            this.loginbutton.Click += new System.EventHandler(this.button1_Click);
+            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click);
             // 
             // cancelbutton
             // 
@@ -130,8 +130,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.loginbutton);
             this.Controls.Add(this.idlabel);
             this.Controls.Add(this.passwordlabel);
-            this.Controls.Add(this.passwordtextBox);
-            this.Controls.Add(this.idtextBox);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.idBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login";
@@ -142,8 +142,8 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-        private System.Windows.Forms.TextBox idtextBox;
-        private System.Windows.Forms.TextBox passwordtextBox;
+        private System.Windows.Forms.TextBox idBox;
+        private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Label passwordlabel;
         private System.Windows.Forms.Label idlabel;
         private System.Windows.Forms.Button loginbutton;

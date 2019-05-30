@@ -52,51 +52,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (idtextBox.Text.Trim().Length == 0 || passwordtextBox.Text.Trim().Length == 0)
-            //    MessageBox.Show("아이디 혹은 비밀번호를 입력해주세요.", "에러 메시지");
-            //else
-            //{
-            //    User tmp_user = null;
-            //    int cnt = 0;
-            //    foreach (var item in Member.list)
-            //    {
-            //        if (item.Id == idtextBox.Text)
-            //        {
-            //            tmp_user = item;
-            //            break;
-            //        }
-            //        cnt++;
-            //    }
-
-            //    if (tmp_user == null)
-            //        MessageBox.Show("해당 아이디가 존재하지 않습니다.", "에러 메시지");
-            //    else
-            //    {
-            //        if (tmp_user.Password == passwordtextBox.Text)
-            //        {
-            //            idtextBox.Text = "";
-            //            passwordtextBox.Text = "";
-            //            PrimaryOperation.currentUser = cnt;
-            //            home showForm4 = new home();
-            //            showForm4.ShowDialog();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("비밀번호가 올바르지 않습니다.", "에러 메시지");
-            //            passwordtextBox.Text = "";
-            //        }
-            //    }
-
-            //}
-
-            if (PrimaryOperation.logincheck(idtextBox.Text, passwordtextBox.Text))
-            {
-                idtextBox.Text = "";
-                passwordtextBox.Text = "";
-                home showForm4 = new home();
-                showForm4.ShowDialog();
-            }
-
+            
 
         }
 
@@ -105,6 +61,16 @@ namespace WindowsFormsApp1
 
         }
 
-        
+        private void loginbutton_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            str = PrimaryOperation.Loin_User(idBox.Text, passwordBox.Text);
+            if (str == "login")
+            {
+                home showHome = new home();
+                showHome.ShowDialog();
+            }
+            else MessageBox.Show(str);
+        }
     }
 }
