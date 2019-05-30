@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
         public Join()
         {
             InitializeComponent();
+            passwordBox.PasswordChar = '*';
+            passwordCheckBox.PasswordChar = '*';
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,10 +58,13 @@ namespace WindowsFormsApp1
             else if (menRadio.Checked == true) gender = "1";
             str = PrimaryOperation.Join_User(idBox.Text, passwordBox.Text, passwordCheckBox.Text, nameBox.Text, gender, ageBox.Text);
 
+            MessageBox.Show(str);
+
             if (str == "정상적으로 가입되었습니다.")
             {
                 this.Close();
             }
+            
         }
     }
 }
