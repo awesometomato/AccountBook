@@ -77,6 +77,7 @@ namespace WindowsFormsApp1
         {
             DataSet ds = PrimaryOperation.Binding();
             dataGridView1.DataSource = ds.Tables[0];
+            this.dataGridView1.Columns["num"].Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -124,6 +125,8 @@ namespace WindowsFormsApp1
             int rowindex = dataGridView1.CurrentRow.Index;
             int id;
             id = int.Parse(dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
+
+            MessageBox.Show(id.ToString());
 
             Add form = new Add(true);
             form.ShowDialog();

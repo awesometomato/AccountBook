@@ -20,14 +20,16 @@ namespace WindowsFormsApp1
             InitializeComponent();
             prepare_comboBox();
         }
+
         public Add(bool mode)
         {
             this.mode = mode;
             InitializeComponent();
             prepare_comboBox();
 
-           
+            
         }
+
         public void prepare_comboBox()
         {
             yearcomboBox.Items.Add("2019"); 

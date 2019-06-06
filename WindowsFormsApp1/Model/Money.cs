@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         private int year;
         private int month;
         private int day;
-        private bool income_expense;
+        private string income_expense;
 
         public String Kind
         {
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             get { return day; }
             set { day = value; }
         }
-        public bool Income_expense
+        public string Income_expense
         {
             get { return income_expense; }
             set { income_expense = value; }
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             year = 0;
             month = 0;
             day = 0;
-            income_expense = false;
+            income_expense = "지출";
         }
 
         public Money(String kind, int won, int year, int month, int day)
