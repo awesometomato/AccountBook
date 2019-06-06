@@ -47,43 +47,44 @@
             this.yearBox = new System.Windows.Forms.ComboBox();
             this.monthBox = new System.Windows.Forms.ComboBox();
             this.dayBox = new System.Windows.Forms.ComboBox();
-            this.moneylistbox = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // yearlabel
             // 
             this.yearlabel.AutoSize = true;
-            this.yearlabel.Location = new System.Drawing.Point(162, 90);
+            this.yearlabel.Location = new System.Drawing.Point(142, 72);
             this.yearlabel.Name = "yearlabel";
-            this.yearlabel.Size = new System.Drawing.Size(27, 15);
+            this.yearlabel.Size = new System.Drawing.Size(21, 12);
             this.yearlabel.TabIndex = 2;
             this.yearlabel.Text = " 년";
             // 
             // monthlabel
             // 
             this.monthlabel.AutoSize = true;
-            this.monthlabel.Location = new System.Drawing.Point(329, 90);
+            this.monthlabel.Location = new System.Drawing.Point(288, 72);
             this.monthlabel.Name = "monthlabel";
-            this.monthlabel.Size = new System.Drawing.Size(22, 15);
+            this.monthlabel.Size = new System.Drawing.Size(17, 12);
             this.monthlabel.TabIndex = 4;
             this.monthlabel.Text = "월";
             // 
             // daylabel
             // 
             this.daylabel.AutoSize = true;
-            this.daylabel.Location = new System.Drawing.Point(486, 90);
+            this.daylabel.Location = new System.Drawing.Point(425, 72);
             this.daylabel.Name = "daylabel";
-            this.daylabel.Size = new System.Drawing.Size(22, 15);
+            this.daylabel.Size = new System.Drawing.Size(17, 12);
             this.daylabel.TabIndex = 5;
             this.daylabel.Text = "일";
             // 
             // incomeBtn
             // 
             this.incomeBtn.AutoSize = true;
-            this.incomeBtn.Location = new System.Drawing.Point(657, 90);
+            this.incomeBtn.Location = new System.Drawing.Point(575, 72);
             this.incomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.incomeBtn.Name = "incomeBtn";
-            this.incomeBtn.Size = new System.Drawing.Size(58, 19);
+            this.incomeBtn.Size = new System.Drawing.Size(47, 16);
             this.incomeBtn.TabIndex = 6;
             this.incomeBtn.TabStop = true;
             this.incomeBtn.Text = "수입";
@@ -92,10 +93,10 @@
             // expenseBtn
             // 
             this.expenseBtn.AutoSize = true;
-            this.expenseBtn.Location = new System.Drawing.Point(562, 90);
+            this.expenseBtn.Location = new System.Drawing.Point(492, 72);
             this.expenseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.expenseBtn.Name = "expenseBtn";
-            this.expenseBtn.Size = new System.Drawing.Size(58, 19);
+            this.expenseBtn.Size = new System.Drawing.Size(47, 16);
             this.expenseBtn.TabIndex = 7;
             this.expenseBtn.TabStop = true;
             this.expenseBtn.Text = "지출";
@@ -103,44 +104,44 @@
             // 
             // moneyBox
             // 
-            this.moneyBox.Location = new System.Drawing.Point(363, 132);
+            this.moneyBox.Location = new System.Drawing.Point(318, 106);
             this.moneyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.moneyBox.Name = "moneyBox";
-            this.moneyBox.Size = new System.Drawing.Size(100, 25);
+            this.moneyBox.Size = new System.Drawing.Size(88, 21);
             this.moneyBox.TabIndex = 8;
             // 
             // moneylabel
             // 
             this.moneylabel.AutoSize = true;
-            this.moneylabel.Location = new System.Drawing.Point(486, 142);
+            this.moneylabel.Location = new System.Drawing.Point(425, 114);
             this.moneylabel.Name = "moneylabel";
-            this.moneylabel.Size = new System.Drawing.Size(22, 15);
+            this.moneylabel.Size = new System.Drawing.Size(17, 12);
             this.moneylabel.TabIndex = 9;
             this.moneylabel.Text = "원";
             // 
             // memolabel
             // 
             this.memolabel.AutoSize = true;
-            this.memolabel.Location = new System.Drawing.Point(53, 132);
+            this.memolabel.Location = new System.Drawing.Point(46, 106);
             this.memolabel.Name = "memolabel";
-            this.memolabel.Size = new System.Drawing.Size(37, 15);
+            this.memolabel.Size = new System.Drawing.Size(29, 12);
             this.memolabel.TabIndex = 10;
             this.memolabel.Text = "메모";
             // 
             // memoBox
             // 
-            this.memoBox.Location = new System.Drawing.Point(113, 132);
+            this.memoBox.Location = new System.Drawing.Point(99, 106);
             this.memoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.memoBox.Name = "memoBox";
-            this.memoBox.Size = new System.Drawing.Size(191, 25);
+            this.memoBox.Size = new System.Drawing.Size(168, 21);
             this.memoBox.TabIndex = 11;
             // 
             // addbutton
             // 
-            this.addbutton.Location = new System.Drawing.Point(562, 125);
+            this.addbutton.Location = new System.Drawing.Point(492, 100);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
-            this.addbutton.Size = new System.Drawing.Size(75, 22);
+            this.addbutton.Size = new System.Drawing.Size(66, 18);
             this.addbutton.TabIndex = 12;
             this.addbutton.Text = "추가";
             this.addbutton.UseVisualStyleBackColor = true;
@@ -148,10 +149,10 @@
             // 
             // comparebutton
             // 
-            this.comparebutton.Location = new System.Drawing.Point(562, 12);
+            this.comparebutton.Location = new System.Drawing.Point(492, 10);
             this.comparebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comparebutton.Name = "comparebutton";
-            this.comparebutton.Size = new System.Drawing.Size(208, 22);
+            this.comparebutton.Size = new System.Drawing.Size(182, 18);
             this.comparebutton.TabIndex = 17;
             this.comparebutton.Text = "비교";
             this.comparebutton.UseVisualStyleBackColor = true;
@@ -159,10 +160,9 @@
             // 
             // logoutbutton
             // 
-            this.logoutbutton.Location = new System.Drawing.Point(35, 12);
-            this.logoutbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.logoutbutton.Location = new System.Drawing.Point(31, 10);
             this.logoutbutton.Name = "logoutbutton";
-            this.logoutbutton.Size = new System.Drawing.Size(86, 29);
+            this.logoutbutton.Size = new System.Drawing.Size(75, 23);
             this.logoutbutton.TabIndex = 18;
             this.logoutbutton.Text = "로그아웃";
             this.logoutbutton.UseVisualStyleBackColor = true;
@@ -170,36 +170,42 @@
             // 
             // searchbutton
             // 
-            this.searchbutton.Location = new System.Drawing.Point(562, 154);
+            this.searchbutton.Location = new System.Drawing.Point(492, 123);
+            this.searchbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchbutton.Name = "searchbutton";
-            this.searchbutton.Size = new System.Drawing.Size(75, 23);
+            this.searchbutton.Size = new System.Drawing.Size(66, 18);
             this.searchbutton.TabIndex = 19;
             this.searchbutton.Text = "검색";
             this.searchbutton.UseVisualStyleBackColor = true;
             // 
             // deletebutton
             // 
-            this.deletebutton.Location = new System.Drawing.Point(657, 154);
+            this.deletebutton.Location = new System.Drawing.Point(575, 123);
+            this.deletebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deletebutton.Name = "deletebutton";
-            this.deletebutton.Size = new System.Drawing.Size(75, 23);
+            this.deletebutton.Size = new System.Drawing.Size(66, 18);
             this.deletebutton.TabIndex = 20;
             this.deletebutton.Text = "삭제";
             this.deletebutton.UseVisualStyleBackColor = true;
+            this.deletebutton.Click += new System.EventHandler(this.deletebutton_Click);
             // 
             // changebutton
             // 
-            this.changebutton.Location = new System.Drawing.Point(657, 124);
+            this.changebutton.Location = new System.Drawing.Point(575, 99);
+            this.changebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.changebutton.Name = "changebutton";
-            this.changebutton.Size = new System.Drawing.Size(75, 23);
+            this.changebutton.Size = new System.Drawing.Size(66, 18);
             this.changebutton.TabIndex = 21;
             this.changebutton.Text = "수정";
             this.changebutton.UseVisualStyleBackColor = true;
+            this.changebutton.Click += new System.EventHandler(this.changebutton_Click);
             // 
             // exelbutton
             // 
-            this.exelbutton.Location = new System.Drawing.Point(562, 39);
+            this.exelbutton.Location = new System.Drawing.Point(492, 31);
+            this.exelbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exelbutton.Name = "exelbutton";
-            this.exelbutton.Size = new System.Drawing.Size(208, 23);
+            this.exelbutton.Size = new System.Drawing.Size(182, 18);
             this.exelbutton.TabIndex = 22;
             this.exelbutton.Text = "엑셀로다운받기";
             this.exelbutton.UseVisualStyleBackColor = true;
@@ -207,42 +213,45 @@
             // yearBox
             // 
             this.yearBox.FormattingEnabled = true;
-            this.yearBox.Location = new System.Drawing.Point(35, 87);
+            this.yearBox.Location = new System.Drawing.Point(31, 70);
+            this.yearBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yearBox.Name = "yearBox";
-            this.yearBox.Size = new System.Drawing.Size(121, 23);
+            this.yearBox.Size = new System.Drawing.Size(106, 20);
             this.yearBox.TabIndex = 23;
             // 
             // monthBox
             // 
             this.monthBox.FormattingEnabled = true;
-            this.monthBox.Location = new System.Drawing.Point(195, 89);
+            this.monthBox.Location = new System.Drawing.Point(171, 71);
+            this.monthBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.monthBox.Name = "monthBox";
-            this.monthBox.Size = new System.Drawing.Size(121, 23);
+            this.monthBox.Size = new System.Drawing.Size(106, 20);
             this.monthBox.TabIndex = 24;
             // 
             // dayBox
             // 
             this.dayBox.FormattingEnabled = true;
-            this.dayBox.Location = new System.Drawing.Point(357, 90);
+            this.dayBox.Location = new System.Drawing.Point(312, 72);
+            this.dayBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dayBox.Name = "dayBox";
-            this.dayBox.Size = new System.Drawing.Size(121, 23);
+            this.dayBox.Size = new System.Drawing.Size(106, 20);
             this.dayBox.TabIndex = 25;
             // 
-            // moneylistbox
+            // dataGridView1
             // 
-            this.moneylistbox.FormattingEnabled = true;
-            this.moneylistbox.ItemHeight = 15;
-            this.moneylistbox.Location = new System.Drawing.Point(25, 197);
-            this.moneylistbox.Name = "moneylistbox";
-            this.moneylistbox.Size = new System.Drawing.Size(745, 229);
-            this.moneylistbox.TabIndex = 26;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(31, 155);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(631, 182);
+            this.dataGridView1.TabIndex = 26;
             // 
             // home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.moneylistbox);
+            this.ClientSize = new System.Drawing.Size(700, 360);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dayBox);
             this.Controls.Add(this.monthBox);
             this.Controls.Add(this.yearBox);
@@ -265,6 +274,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "home";
             this.Text = "Home";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +300,6 @@
         private System.Windows.Forms.ComboBox yearBox;
         private System.Windows.Forms.ComboBox monthBox;
         private System.Windows.Forms.ComboBox dayBox;
-        private System.Windows.Forms.ListBox moneylistbox;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

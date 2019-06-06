@@ -18,7 +18,9 @@ namespace WindowsFormsApp1
             prepare_comboBox();
             expenseBtn.Checked = false;
             incomeBtn.Checked = false;
+            createData();
         }
+
         public void prepare_comboBox()
         {
             yearBox.Items.Add("2019");
@@ -71,6 +73,12 @@ namespace WindowsFormsApp1
             dayBox.Items.Add("31");
         }
 
+        public void createData()
+        {
+            DataSet ds = PrimaryOperation.Binding();
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Compare showForm5 = new Compare();
@@ -79,37 +87,53 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e) // logoutBtn
         {
-            PrimaryOperation.currentUser = -1;
+            //PrimaryOperation.currentUser = -1;
             PrimaryOperation.currentID = null; // db
             this.Close();
         }
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            /*
             Add showForm3 = new Add();
             showForm3.ShowDialog();
-            */
-            string str;
+            createData();
+            //string str;
 
-            string sign = "2";
-            if (expenseBtn.Checked == true) { sign = "0"; }
-            else if (incomeBtn.Checked == true) { sign = "1"; }
+            //string sign = "2";
+            //if (expenseBtn.Checked == true) { sign = "0"; }
+            //else if (incomeBtn.Checked == true) { sign = "1"; }
 
-            str = PrimaryOperation.AddMoney(moneyBox.Text, sign, yearBox.Text, monthBox.Text, dayBox.Text, memoBox.Text);
+            //str = PrimaryOperation.AddMoney(moneyBox.Text, sign, yearBox.Text, monthBox.Text, dayBox.Text, memoBox.Text);
 
-            MessageBox.Show(str);
+            //MessageBox.Show(str);
 
-            // 초기화
-            if (str == "정상적으로 입력되었습니다.")
-            {
-                yearBox.Text = "";
-                monthBox.Text = "";
-                dayBox.Text = "";
-                memoBox.Text = "";
-                moneyBox.Text = "";
-                expenseBtn.Checked = false; incomeBtn.Checked = false;
-            }
+            //// 초기화
+            //if (str == "정상적으로 입력되었습니다.")
+            //{
+            //    yearBox.Text = "";
+            //    monthBox.Text = "";
+            //    dayBox.Text = "";
+            //    memoBox.Text = "";
+            //    moneyBox.Text = "";
+            //    expenseBtn.Checked = false; incomeBtn.Checked = false;
+            //}
+        }
+
+        private void changebutton_Click(object sender, EventArgs e)
+        {
+            int rowindex = dataGridView1.CurrentRow.Index;
+            int id;
+            id = int.Parse(dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
+
+            Add form = new Add(true);
+            form.ShowDialog();
+            createData();
+        }
+
+        private void deletebutton_Click(object sender, EventArgs e)
+        {
+
+            createData();
         }
     }
 }

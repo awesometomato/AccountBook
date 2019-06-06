@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Expense.cs" />
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +76,6 @@
     <Compile Include="View\Compare.Designer.cs">
       <DependentUpon>Compare.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Income.cs" />
-    <Compile Include="Model\Member.cs" />
     <Compile Include="Model\Money.cs" />
     <Compile Include="Presenter\PrimaryOperation.cs" />
     <Compile Include="Presenter\Program.cs" />

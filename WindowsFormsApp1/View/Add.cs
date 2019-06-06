@@ -12,11 +12,21 @@ namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
+        private bool mode;
+
         public Add()
         {
+            mode = false;
             InitializeComponent();
             prepare_comboBox();
-        
+        }
+        public Add(bool mode)
+        {
+            this.mode = mode;
+            InitializeComponent();
+            prepare_comboBox();
+
+           
         }
         public void prepare_comboBox()
         {
@@ -91,9 +101,30 @@ namespace WindowsFormsApp1
             //    this.Close();
             //}
 
-            if (PrimaryOperation.addItem(memotextBox.Text, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, moneytextBox.Text,
-                expenseradiobutton.Checked, incomeradiobutton.Checked))
-                this.Close();
+            string str;
+
+            string sign = "2";
+            if (expenseradiobutton.Checked == true) { sign = "0"; }
+            else if (incomeradiobutton.Checked == true) { sign = "1"; }
+
+            str = PrimaryOperation.AddMoney(moneytextBox.Text, sign, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, memotextBox.Text, mode);
+
+            MessageBox.Show(str);
+
+            // 초기화
+            if (str == "정상적으로 입력되었습니다.")
+            {
+                yearcomboBox.Text = "";
+                monthcomboBox.Text = "";
+                daycomboBox.Text = "";
+                memotextBox.Text = "";
+                moneytextBox.Text = "";
+                expenseradiobutton.Checked = false;
+                incomeradiobutton.Checked = false;
+            }
+            //if (PrimaryOperation.AddMoney(memotextBox.Text, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, moneytextBox.Text,
+            //    expenseradiobutton.Checked, incomeradiobutton.Checked))
+            //    this.Close();
 
         }
 

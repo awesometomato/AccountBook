@@ -86,11 +86,11 @@ namespace WindowsFormsApp1
 
             if (password != passwordCheck) { return "비밀번호가 일치하지 않습니다."; }
 
-            MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
-            string insertQuery = "INSERT INTO member_tb (id,password,gender,name,age) VALUES('" + id + "','" + password + "','" + gender + ",'" + name + "'," + age + ")";
+            //MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+            string insertQuery = "INSERT INTO user (id,password,gender,name,age) VALUES('" + id + "','" + password + "'," + gender + ",'" + name + "'," + age + ")";
 
-            connection.Open();
-            MySqlCommand command = new MySqlCommand(insertQuery, connection);
+            PrimaryOperation.connection.Open();
+            MySqlCommand command = new MySqlCommand(insertQuery, PrimaryOperation.connection);
 
             try
             {
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
                 else { return ex.Message; }
             } finally
             {
-                connection.Close();
+                PrimaryOperation.connection.Close();
             }
         }
 
@@ -116,13 +116,13 @@ namespace WindowsFormsApp1
 
             try
             {
-                MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+                //MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
 
                 DataSet ds = new DataSet();
 
-                string selectQuery = "SELECT id,password FROM member_tb WHERE id = '"+id+"'";
-                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, connection);
-                adpt.Fill(ds, "member_tb");
+                string selectQuery = "SELECT id,password FROM user WHERE id = '"+id+"'";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+                adpt.Fill(ds, "user");
                 if (ds.Tables.Count == 0) { return "아이디가 존재하지 않습니다."; }
                 else if (ds.Tables.Count > 0)
                 {

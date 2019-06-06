@@ -43,3 +43,7 @@ C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.c
 C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj.CopyComplete
 C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\MySql.Data.dll
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\Google.Protobuf.dll
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\bin\Debug\MySql.Data.xml
