@@ -104,8 +104,8 @@ namespace WindowsFormsApp1
             string str;
 
             string sign = "2";
-            if (expenseradiobutton.Checked == true) { sign = "0"; }
-            else if (incomeradiobutton.Checked == true) { sign = "1"; }
+            if (expenseradiobutton.Checked == true) { sign = "지출"; }
+            else if (incomeradiobutton.Checked == true) { sign = "수입"; }
 
             str = PrimaryOperation.AddMoney(moneytextBox.Text, sign, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, memotextBox.Text, mode);
 

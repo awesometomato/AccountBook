@@ -87,9 +87,9 @@ namespace WindowsFormsApp1
 
             string query;
             if (mode == false)
-                query = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentID["id"].ToString() + "'," + money + "," + sign + "," + date + ",'" + memo + "')";
+                query = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentID["id"].ToString() + "'," + money + ",'" + sign + "'," + date + ",'" + memo + "')";
             else
-                query = "update from money set id = '"+PrimaryOperation.currentID["id"].ToString()+"', money = "+money+", sign = "+sign+", date = "+date+", memo = '"+memo+"'";
+                query = "update from money set id = '"+PrimaryOperation.currentID["id"].ToString()+"', money = "+money+", sign = '"+sign+"' date = "+date+", memo = '"+memo+"'";
 
 
             PrimaryOperation.connection.Open();

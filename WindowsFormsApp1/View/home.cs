@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
 
         private void deletebutton_Click(object sender, EventArgs e)
         {
-
+            
             createData();
         }
     }
