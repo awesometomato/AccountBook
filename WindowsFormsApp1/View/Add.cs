@@ -12,22 +12,34 @@ namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
-        private bool mode;
+        private int num;
 
         public Add()
         {
-            mode = false;
+            num = 0;
             InitializeComponent();
             prepare_comboBox();
         }
 
-        public Add(bool mode)
+        public Add(int num)
         {
-            this.mode = mode;
+            this.num = 2;
             InitializeComponent();
             prepare_comboBox();
 
-            
+            //num에 해당하는 Money객체 생성하는 함수
+            Money money = new Money();
+
+            if (money.Income_expense == "지출")
+                expenseradiobutton.Checked = true;
+            else
+                incomeradiobutton.Checked = true;
+            yearcomboBox.Text = money.Year.ToString();
+            monthcomboBox.Text = money.Month.ToString();
+            daycomboBox.Text = money.Day.ToString();
+            memotextBox.Text = money.Kind;
+            moneytextBox.Text = money.Won.ToString();
+
         }
 
         public void prepare_comboBox()
@@ -109,7 +121,7 @@ namespace WindowsFormsApp1
             if (expenseradiobutton.Checked == true) { sign = "지출"; }
             else if (incomeradiobutton.Checked == true) { sign = "수입"; }
 
-            str = PrimaryOperation.AddMoney(moneytextBox.Text, sign, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, memotextBox.Text, mode);
+            str = PrimaryOperation.AddMoney(moneytextBox.Text, sign, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, memotextBox.Text, num);
 
             MessageBox.Show(str);
 

@@ -123,19 +123,20 @@ namespace WindowsFormsApp1
         private void changebutton_Click(object sender, EventArgs e)
         {
             int rowindex = dataGridView1.CurrentRow.Index;
-            int id;
-            id = int.Parse(dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
-
-            MessageBox.Show(id.ToString());
-
-            Add form = new Add(true);
+            int num = int.Parse(dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
+           
+            Add form = new Add(num);
             form.ShowDialog();
             createData();
         }
 
         private void deletebutton_Click(object sender, EventArgs e)
         {
-            
+            int rowindex = dataGridView1.CurrentRow.Index;
+            int num = int.Parse(dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
+
+            PrimaryOperation.DeleteItem(num);
+          
             createData();
         }
     }

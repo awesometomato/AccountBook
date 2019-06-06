@@ -59,10 +59,10 @@ namespace WindowsFormsApp1
         //    return false;
         //}
 
-        public static string AddMoney(string money, string sign, string year, string month, string day, string memo, bool mode)
+        public static string AddMoney(string money, string sign, string year, string month, string day, string memo, int num)
         {
             Money m = new Money();
-            return m.AddMoney(money, sign, year, month, day, memo, mode);
+            return m.AddMoney(money, sign, year, month, day, memo, num);
         }
 
         //Join - User
@@ -83,6 +83,13 @@ namespace WindowsFormsApp1
         {
             Money m = new Money();
             return m.GetDataSet();
+        }
+        
+        public static string DeleteItem(int num)
+        {
+            //num에 해당하는 Money객체 생성하는 함수
+            Money money = new Money();
+            return money.DeleteMoney(num);
         }
 
         //connection 위치

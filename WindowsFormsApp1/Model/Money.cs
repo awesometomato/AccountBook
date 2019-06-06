@@ -59,16 +59,17 @@ namespace WindowsFormsApp1
             income_expense = "지출";
         }
 
-        public Money(String kind, int won, int year, int month, int day)
+        public Money(String kind, int won, int year, int month, int day, string income_expense)
         {
             this.kind = kind;
             this.won = won;
             this.year = year;
             this.month = month;
             this.day = day;
+            this.income_expense = income_expense;
         }
 
-        public string AddMoney(string money, string sign, string year, string month, string day, string memo, bool mode)
+        public string AddMoney(string money, string sign, string year, string month, string day, string memo, int num)
         {
             if (money == "" || sign == "2" || year =="" || month == "" || day == "")
             {
@@ -86,10 +87,11 @@ namespace WindowsFormsApp1
             //MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
 
             string query;
-            if (mode == false)
+            if (num == 0)
                 query = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentID["id"].ToString() + "'," + money + ",'" + sign + "'," + date + ",'" + memo + "')";
             else
-                query = "update from money set id = '"+PrimaryOperation.currentID["id"].ToString()+"', money = "+money+", sign = '"+sign+"' date = "+date+", memo = '"+memo+"'";
+                query = "update money set money = " + money + ", sign = '" + sign + "', date = " + date + ", memo = '" + memo + "' where num = " + num + "";
+                
 
 
             PrimaryOperation.connection.Open();
@@ -121,6 +123,21 @@ namespace WindowsFormsApp1
             adpt.Fill(ds, "money");
 
             return ds;
+        }
+
+        public string DeleteMoney(int num)
+        {
+            string query;
+
+            query = "Delete from money where num = " + num + "";
+            
+            PrimaryOperation.connection.Open();
+            MySqlCommand cmd = new MySqlCommand(query, PrimaryOperation.connection);
+            cmd.ExecuteNonQuery();
+            PrimaryOperation.connection.Close();
+
+            return "해당 항목을 삭제하였습니다.";
+           
         }
     }
 }
