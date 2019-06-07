@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\CategoryCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CategoryCompare.Designer.cs">
+      <DependentUpon>CategoryCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MonthCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MonthCompare.Designer.cs">
+      <DependentUpon>MonthCompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DayCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DayCompare.Designer.cs">
+      <DependentUpon>DayCompare.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +100,15 @@
     <Compile Include="Presenter\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\User.cs" />
+    <EmbeddedResource Include="View\CategoryCompare.resx">
+      <DependentUpon>CategoryCompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MonthCompare.resx">
+      <DependentUpon>MonthCompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DayCompare.resx">
+      <DependentUpon>DayCompare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Compare.resx">
       <DependentUpon>Compare.cs</DependentUpon>
     </EmbeddedResource>

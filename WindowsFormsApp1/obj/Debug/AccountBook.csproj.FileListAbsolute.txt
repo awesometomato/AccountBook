@@ -64,3 +64,6 @@ C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj
 C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\AccountBook.csproj.CoreCompileInputs.cache
 C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DayCompare.resources
+C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MonthCompare.resources
+C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CategoryCompare.resources

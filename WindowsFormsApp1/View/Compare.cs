@@ -16,5 +16,23 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void daycomparebtn_Click(object sender, EventArgs e)
+        {
+            DayCompare showForm2 = new DayCompare();
+            showForm2.ShowDialog();
+        }
+
+        private void monthcomparebtn_Click(object sender, EventArgs e)
+        {
+            MonthCompare showForm3 = new MonthCompare();
+            showForm3.ShowDialog();
+        }
+
+        private void categorycomparebtn_Click(object sender, EventArgs e)
+        {
+            CategoryCompare showForm1 = new CategoryCompare();
+            showForm1.ShowDialog();
+        }
     }
 }

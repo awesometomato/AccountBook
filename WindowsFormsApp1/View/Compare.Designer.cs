@@ -41,6 +41,7 @@
             this.daycomparebtn.TabIndex = 0;
             this.daycomparebtn.Text = "일별 비교";
             this.daycomparebtn.UseVisualStyleBackColor = true;
+            this.daycomparebtn.Click += new System.EventHandler(this.daycomparebtn_Click);
             // 
             // monthcomparebtn
             // 
@@ -50,6 +51,7 @@
             this.monthcomparebtn.TabIndex = 1;
             this.monthcomparebtn.Text = "월별 비교";
             this.monthcomparebtn.UseVisualStyleBackColor = true;
+            this.monthcomparebtn.Click += new System.EventHandler(this.monthcomparebtn_Click);
             // 
             // categorycomparebtn
             // 
@@ -59,6 +61,7 @@
             this.categorycomparebtn.TabIndex = 2;
             this.categorycomparebtn.Text = "카테고리별 비교";
             this.categorycomparebtn.UseVisualStyleBackColor = true;
+            this.categorycomparebtn.Click += new System.EventHandler(this.categorycomparebtn_Click);
             // 
             // Compare
             // 
