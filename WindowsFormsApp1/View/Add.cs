@@ -96,24 +96,6 @@ namespace WindowsFormsApp1
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-            //int won;
-
-            //if (yearcomboBox.Text == "" || monthcomboBox.Text == "" || daycomboBox.Text == "" ||
-            //    memotextBox.Text == "" || moneytextBox.Text == "")
-            //    MessageBox.Show("입력되지 않은 빈 칸이 있습니다.", "에러 메시지");
-            //else if (expenseradiobutton.Checked == false && incomeradiobutton.Checked == false)
-            //    MessageBox.Show("지출인지 수입인지를 선택해주세요.", "에러 메시지");
-            //else if (int.TryParse(moneytextBox.Text, out won) == false || won <= 0)
-            //    MessageBox.Show("액수는 자연수만 입력해주세요.", "에러 메시지");
-            //else
-            //{
-            //    PrimaryOperation.moneystore(memotextBox.Text, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, moneytextBox.Text);
-            //    if (expenseradiobutton.Checked == true)
-            //        MessageBox.Show("지출 항목이 추가되었습니다.", "항목 추가 완료");
-            //    else
-            //        MessageBox.Show("수입 항목이 추가되었습니다.", "항목 추가 완료");
-            //    this.Close();
-            //}
 
             string str;
 
@@ -135,6 +117,7 @@ namespace WindowsFormsApp1
                 moneytextBox.Text = "";
                 expenseradiobutton.Checked = false;
                 incomeradiobutton.Checked = false;
+                this.Close();
             }
             //if (PrimaryOperation.AddMoney(memotextBox.Text, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, moneytextBox.Text,
             //    expenseradiobutton.Checked, incomeradiobutton.Checked))

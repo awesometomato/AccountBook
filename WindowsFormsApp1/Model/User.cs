@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -13,32 +14,32 @@ namespace WindowsFormsApp1
     {
         public static int total_People;
 
-        private String id;
-        private String password;
-        private String name;
-        private bool gender;
+        private string id;
+        private string password;
+        private string name;
+        private int gender;
         private int age;
-        public List<Money> moneylist;
+  
 
-        public String Id
+        public string Id
         {
             get { return id; }
             set { id = value; }
         }
 
-        public String Password
+        public string Password
         {
             get { return password; }
             set { password = value; }
         }
 
-        public String Name
+        public string Name
         {
             get { return name; }
             set { name = value; }
         }
 
-        public bool Gender
+        public int Gender
         {
             get { return gender; }
             set { gender = value; }
@@ -60,21 +61,17 @@ namespace WindowsFormsApp1
             id = "";
             password = "";
             name = "";
-            gender = false;
+            gender = 0;
             age = 0;
-            moneylist = new List<Money>();
-            total_People++;
         }
 
-        public User(String id, String password, String name, bool gender, int generation)
+        public User(string id, string password, string name, int gender, int age)
         {
-            this.id = id;
-            this.password = password;
-            this.name = name;
-            this.gender = gender;
-            this.age = generation;
-            moneylist = new List<Money>();
-            total_People++;
+            Id = id;
+            Password = password;
+            Name = name;
+            Gender = gender;
+            Age = age;
         }
 
         public string AddUser(string id, string password, string passwordCheck, string name, string gender, string age)
@@ -86,7 +83,6 @@ namespace WindowsFormsApp1
 
             if (password != passwordCheck) { return "비밀번호가 일치하지 않습니다."; }
 
-            //MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
             string insertQuery = "INSERT INTO user (id,password,gender,name,age) VALUES('" + id + "','" + password + "'," + gender + ",'" + name + "'," + age + ")";
 
             PrimaryOperation.connection.Open();
@@ -116,11 +112,10 @@ namespace WindowsFormsApp1
 
             try
             {
-                //MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
 
                 DataSet ds = new DataSet();
 
-                string selectQuery = "SELECT id,password FROM user WHERE id = '"+id+"'";
+                string selectQuery = "SELECT * FROM user WHERE id = '"+id+"'";
                 MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
                 adpt.Fill(ds, "user");
                 if (ds.Tables.Count == 0) { return "아이디가 존재하지 않습니다."; }
@@ -130,7 +125,9 @@ namespace WindowsFormsApp1
                     row = ds.Tables[0].Rows[0];
                     if (row["password"].ToString() == password)
                     {
-                        PrimaryOperation.currentID = row;
+                        //PrimaryOperation.currentID = row;
+                        PrimaryOperation.currentUser = new User(row["id"].ToString(), row["password"].ToString(), row["name"].ToString(), int.Parse(row["gender"].ToString()), int.Parse(row["age"].ToString()));
+
                         return "login";
                     }
                     else return "비밀번호가 일치하지 않습니다.";

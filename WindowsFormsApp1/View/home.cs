@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e) // logoutBtn
         {
             //PrimaryOperation.currentUser = -1;
-            PrimaryOperation.currentID = null; // db
+            PrimaryOperation.currentUser = null; // db
             this.Close();
         }
 
@@ -98,26 +98,6 @@ namespace WindowsFormsApp1
             Add showForm3 = new Add();
             showForm3.ShowDialog();
             createData();
-            //string str;
-
-            //string sign = "2";
-            //if (expenseBtn.Checked == true) { sign = "0"; }
-            //else if (incomeBtn.Checked == true) { sign = "1"; }
-
-            //str = PrimaryOperation.AddMoney(moneyBox.Text, sign, yearBox.Text, monthBox.Text, dayBox.Text, memoBox.Text);
-
-            //MessageBox.Show(str);
-
-            //// 초기화
-            //if (str == "정상적으로 입력되었습니다.")
-            //{
-            //    yearBox.Text = "";
-            //    monthBox.Text = "";
-            //    dayBox.Text = "";
-            //    memoBox.Text = "";
-            //    moneyBox.Text = "";
-            //    expenseBtn.Checked = false; incomeBtn.Checked = false;
-            //}
         }
 
         private void changebutton_Click(object sender, EventArgs e)

@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
 
             string query;
             if (num == 0)
-                query = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentID["id"].ToString() + "'," + money + ",'" + sign + "'," + date + ",'" + memo + "')";
+                query = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentUser.Id + "'," + money + ",'" + sign + "'," + date + ",'" + memo + "')";
             else
                 query = "update money set money = " + money + ", sign = '" + sign + "', date = " + date + ", memo = '" + memo + "' where num = " + num + "";
                 
@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
         public DataSet GetDataSet()
         {
             DataSet ds = new DataSet();
-            String selectQuery = "select * from money where id = '" + PrimaryOperation.currentID["id"].ToString() + "'";
+            String selectQuery = "select * from money where id = '" + PrimaryOperation.currentUser.Id + "'";
             MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
             adpt.Fill(ds, "money");
 
