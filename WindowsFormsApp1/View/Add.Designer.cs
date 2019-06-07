@@ -41,6 +41,8 @@
             this.daycomboBox = new System.Windows.Forms.ComboBox();
             this.expenseradiobutton = new System.Windows.Forms.RadioButton();
             this.incomeradiobutton = new System.Windows.Forms.RadioButton();
+            this.expenseㄷategorycomboBox = new System.Windows.Forms.ComboBox();
+            this.incomecategorycomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // momolabel
@@ -145,7 +147,7 @@
             // expenseradiobutton
             // 
             this.expenseradiobutton.AutoSize = true;
-            this.expenseradiobutton.Location = new System.Drawing.Point(38, 21);
+            this.expenseradiobutton.Location = new System.Drawing.Point(49, 25);
             this.expenseradiobutton.Name = "expenseradiobutton";
             this.expenseradiobutton.Size = new System.Drawing.Size(47, 16);
             this.expenseradiobutton.TabIndex = 27;
@@ -156,7 +158,7 @@
             // incomeradiobutton
             // 
             this.incomeradiobutton.AutoSize = true;
-            this.incomeradiobutton.Location = new System.Drawing.Point(97, 21);
+            this.incomeradiobutton.Location = new System.Drawing.Point(268, 25);
             this.incomeradiobutton.Name = "incomeradiobutton";
             this.incomeradiobutton.Size = new System.Drawing.Size(47, 16);
             this.incomeradiobutton.TabIndex = 28;
@@ -164,11 +166,51 @@
             this.incomeradiobutton.Text = "수입";
             this.incomeradiobutton.UseVisualStyleBackColor = true;
             // 
+            // expenseㄷategorycomboBox
+            // 
+            this.expenseㄷategorycomboBox.FormattingEnabled = true;
+            this.expenseㄷategorycomboBox.Items.AddRange(new object[] {
+            "식비",
+            "교통비",
+            "문화생활",
+            "생필품",
+            "의류",
+            "미용",
+            "의료/건강",
+            "교육",
+            "통신비",
+            "회비",
+            "경조사",
+            "저축",
+            "가전",
+            "공과금",
+            "카드대금"});
+            this.expenseㄷategorycomboBox.Location = new System.Drawing.Point(126, 21);
+            this.expenseㄷategorycomboBox.Name = "expenseㄷategorycomboBox";
+            this.expenseㄷategorycomboBox.Size = new System.Drawing.Size(121, 20);
+            this.expenseㄷategorycomboBox.TabIndex = 29;
+            // 
+            // incomecategorycomboBox
+            // 
+            this.incomecategorycomboBox.FormattingEnabled = true;
+            this.incomecategorycomboBox.Items.AddRange(new object[] {
+            "월급",
+            "용돈",
+            "이월",
+            "기타",
+            "자산인출"});
+            this.incomecategorycomboBox.Location = new System.Drawing.Point(339, 21);
+            this.incomecategorycomboBox.Name = "incomecategorycomboBox";
+            this.incomecategorycomboBox.Size = new System.Drawing.Size(121, 20);
+            this.incomecategorycomboBox.TabIndex = 30;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 161);
+            this.Controls.Add(this.incomecategorycomboBox);
+            this.Controls.Add(this.expenseㄷategorycomboBox);
             this.Controls.Add(this.incomeradiobutton);
             this.Controls.Add(this.expenseradiobutton);
             this.Controls.Add(this.daycomboBox);
@@ -205,5 +247,7 @@
         private System.Windows.Forms.ComboBox daycomboBox;
         private System.Windows.Forms.RadioButton expenseradiobutton;
         private System.Windows.Forms.RadioButton incomeradiobutton;
+        private System.Windows.Forms.ComboBox expenseㄷategorycomboBox;
+        private System.Windows.Forms.ComboBox incomecategorycomboBox;
     }
 }

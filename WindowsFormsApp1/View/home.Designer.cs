@@ -48,6 +48,8 @@
             this.monthBox = new System.Windows.Forms.ComboBox();
             this.dayBox = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.expenseㄷategorycomboBox = new System.Windows.Forms.ComboBox();
+            this.incomecategorycomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             // incomeBtn
             // 
             this.incomeBtn.AutoSize = true;
-            this.incomeBtn.Location = new System.Drawing.Point(575, 72);
+            this.incomeBtn.Location = new System.Drawing.Point(130, 33);
             this.incomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.incomeBtn.Name = "incomeBtn";
             this.incomeBtn.Size = new System.Drawing.Size(47, 16);
@@ -93,7 +95,7 @@
             // expenseBtn
             // 
             this.expenseBtn.AutoSize = true;
-            this.expenseBtn.Location = new System.Drawing.Point(492, 72);
+            this.expenseBtn.Location = new System.Drawing.Point(130, 12);
             this.expenseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.expenseBtn.Name = "expenseBtn";
             this.expenseBtn.Size = new System.Drawing.Size(47, 16);
@@ -104,10 +106,10 @@
             // 
             // moneyBox
             // 
-            this.moneyBox.Location = new System.Drawing.Point(318, 106);
+            this.moneyBox.Location = new System.Drawing.Point(302, 106);
             this.moneyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.moneyBox.Name = "moneyBox";
-            this.moneyBox.Size = new System.Drawing.Size(88, 21);
+            this.moneyBox.Size = new System.Drawing.Size(116, 21);
             this.moneyBox.TabIndex = 8;
             // 
             // moneylabel
@@ -122,7 +124,7 @@
             // memolabel
             // 
             this.memolabel.AutoSize = true;
-            this.memolabel.Location = new System.Drawing.Point(46, 106);
+            this.memolabel.Location = new System.Drawing.Point(29, 109);
             this.memolabel.Name = "memolabel";
             this.memolabel.Size = new System.Drawing.Size(29, 12);
             this.memolabel.TabIndex = 10;
@@ -130,15 +132,15 @@
             // 
             // memoBox
             // 
-            this.memoBox.Location = new System.Drawing.Point(99, 106);
+            this.memoBox.Location = new System.Drawing.Point(77, 105);
             this.memoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.memoBox.Name = "memoBox";
-            this.memoBox.Size = new System.Drawing.Size(168, 21);
+            this.memoBox.Size = new System.Drawing.Size(183, 21);
             this.memoBox.TabIndex = 11;
             // 
             // addbutton
             // 
-            this.addbutton.Location = new System.Drawing.Point(492, 100);
+            this.addbutton.Location = new System.Drawing.Point(492, 74);
             this.addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addbutton.Name = "addbutton";
             this.addbutton.Size = new System.Drawing.Size(66, 18);
@@ -160,7 +162,7 @@
             // 
             // logoutbutton
             // 
-            this.logoutbutton.Location = new System.Drawing.Point(31, 10);
+            this.logoutbutton.Location = new System.Drawing.Point(12, 12);
             this.logoutbutton.Name = "logoutbutton";
             this.logoutbutton.Size = new System.Drawing.Size(75, 23);
             this.logoutbutton.TabIndex = 18;
@@ -170,7 +172,7 @@
             // 
             // searchbutton
             // 
-            this.searchbutton.Location = new System.Drawing.Point(492, 123);
+            this.searchbutton.Location = new System.Drawing.Point(492, 111);
             this.searchbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchbutton.Name = "searchbutton";
             this.searchbutton.Size = new System.Drawing.Size(66, 18);
@@ -180,7 +182,7 @@
             // 
             // deletebutton
             // 
-            this.deletebutton.Location = new System.Drawing.Point(575, 123);
+            this.deletebutton.Location = new System.Drawing.Point(589, 111);
             this.deletebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deletebutton.Name = "deletebutton";
             this.deletebutton.Size = new System.Drawing.Size(66, 18);
@@ -191,7 +193,7 @@
             // 
             // changebutton
             // 
-            this.changebutton.Location = new System.Drawing.Point(575, 99);
+            this.changebutton.Location = new System.Drawing.Point(589, 74);
             this.changebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.changebutton.Name = "changebutton";
             this.changebutton.Size = new System.Drawing.Size(66, 18);
@@ -249,11 +251,51 @@
             this.dataGridView1.Size = new System.Drawing.Size(643, 182);
             this.dataGridView1.TabIndex = 26;
             // 
+            // expenseㄷategorycomboBox
+            // 
+            this.expenseㄷategorycomboBox.FormattingEnabled = true;
+            this.expenseㄷategorycomboBox.Items.AddRange(new object[] {
+            "식비",
+            "교통비",
+            "문화생활",
+            "생필품",
+            "의류",
+            "미용",
+            "의료/건강",
+            "교육",
+            "통신비",
+            "회비",
+            "경조사",
+            "저축",
+            "가전",
+            "공과금",
+            "카드대금"});
+            this.expenseㄷategorycomboBox.Location = new System.Drawing.Point(205, 10);
+            this.expenseㄷategorycomboBox.Name = "expenseㄷategorycomboBox";
+            this.expenseㄷategorycomboBox.Size = new System.Drawing.Size(121, 20);
+            this.expenseㄷategorycomboBox.TabIndex = 27;
+            // 
+            // incomecategorycomboBox
+            // 
+            this.incomecategorycomboBox.FormattingEnabled = true;
+            this.incomecategorycomboBox.Items.AddRange(new object[] {
+            "월급",
+            "용돈",
+            "이월",
+            "기타",
+            "자산인출"});
+            this.incomecategorycomboBox.Location = new System.Drawing.Point(205, 36);
+            this.incomecategorycomboBox.Name = "incomecategorycomboBox";
+            this.incomecategorycomboBox.Size = new System.Drawing.Size(121, 20);
+            this.incomecategorycomboBox.TabIndex = 28;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 360);
+            this.Controls.Add(this.incomecategorycomboBox);
+            this.Controls.Add(this.expenseㄷategorycomboBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dayBox);
             this.Controls.Add(this.monthBox);
@@ -304,5 +346,7 @@
         private System.Windows.Forms.ComboBox monthBox;
         private System.Windows.Forms.ComboBox dayBox;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox expenseㄷategorycomboBox;
+        private System.Windows.Forms.ComboBox incomecategorycomboBox;
     }
 }
