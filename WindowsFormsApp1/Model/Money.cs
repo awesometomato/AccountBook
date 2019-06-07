@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -67,6 +68,37 @@ namespace WindowsFormsApp1
             this.month = month;
             this.day = day;
             this.income_expense = income_expense;
+        }
+
+        public Money(int num)
+        {
+            try
+            {
+                string selectQuery = "SELECT * FROM money WHERE num = '" + num.ToString() + "'";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    Kind = row["memo"].ToString();
+                    Won = int.Parse(row["money"].ToString());
+                    year = int.Parse(row["date"].ToString().Substring(0,4));
+                    //MessageBox.Show(row["date"].ToString());
+                    month = int.Parse(row["date"].ToString().Substring(5,2));
+                    day = int.Parse(row["date"].ToString().Substring(8,2));
+                    income_expense = row["sign"].ToString();
+
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         public string AddMoney(string money, string sign, string year, string month, string day, string memo, int num)

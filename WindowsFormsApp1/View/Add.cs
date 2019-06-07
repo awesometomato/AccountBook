@@ -28,12 +28,18 @@ namespace WindowsFormsApp1
             prepare_comboBox();
 
             //num에 해당하는 Money객체 생성하는 함수
-            Money money = new Money();
+            Money money = new Money(num);
 
             if (money.Income_expense == "지출")
+            {
                 expenseradiobutton.Checked = true;
+                incomeradiobutton.Checked = false;
+            }
             else
+            {
                 incomeradiobutton.Checked = true;
+                expenseradiobutton.Checked = false;
+            }
             yearcomboBox.Text = money.Year.ToString();
             monthcomboBox.Text = money.Month.ToString();
             daycomboBox.Text = money.Day.ToString();

@@ -93,14 +93,14 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void addbutton_Click(object sender, EventArgs e)
+        private void addbutton_Click(object sender, EventArgs e) // 추가 버튼
         {
             Add showForm3 = new Add();
             showForm3.ShowDialog();
             createData();
         }
 
-        private void changebutton_Click(object sender, EventArgs e)
+        private void changebutton_Click(object sender, EventArgs e) // 변경 버튼
         {
             int rowindex = dataGridView1.CurrentRow.Index;
             int num = int.Parse(dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
