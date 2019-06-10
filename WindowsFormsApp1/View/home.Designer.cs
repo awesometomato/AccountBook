@@ -179,6 +179,7 @@
             this.searchbutton.TabIndex = 19;
             this.searchbutton.Text = "검색";
             this.searchbutton.UseVisualStyleBackColor = true;
+            this.searchbutton.Click += new System.EventHandler(this.searchbutton_Click);
             // 
             // deletebutton
             // 

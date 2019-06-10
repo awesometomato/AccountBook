@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             prepare_comboBox();
             expenseBtn.Checked = false;
             incomeBtn.Checked = false;
-            createData();
+            createData("00000000");
         }
 
         public void prepare_comboBox()
@@ -73,9 +73,9 @@ namespace WindowsFormsApp1
             dayBox.Items.Add("31");
         }
 
-        public void createData()
+        public void createData(string date)
         {
-            DataSet ds = PrimaryOperation.Binding();
+            DataSet ds = PrimaryOperation.Binding(date);
             dataGridView1.DataSource = ds.Tables[0];
             this.dataGridView1.Columns["num"].Visible = false;
         }
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
         {
             Add showForm3 = new Add();
             showForm3.ShowDialog();
-            createData();
+            createData("00000000");
         }
 
         private void changebutton_Click(object sender, EventArgs e) // 변경 버튼
@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
            
             Add form = new Add(num);
             form.ShowDialog();
-            createData();
+            createData("00000000");
         }
 
         private void deletebutton_Click(object sender, EventArgs e)
@@ -117,7 +117,30 @@ namespace WindowsFormsApp1
 
             PrimaryOperation.DeleteItem(num);
           
-            createData();
+            createData("00000000");
+        }
+
+        private void searchbutton_Click(object sender, EventArgs e)
+        {
+            string date = "";
+
+            if (yearBox.Text == "")
+                date += "0000";
+            else
+               date += string.Format("{0:D4}", int.Parse(yearBox.Text));
+
+            if (monthBox.Text == "")
+                date += "00";
+            else
+                date += string.Format("{0:D2}", int.Parse(monthBox.Text));
+
+            if (dayBox.Text == "")
+                date += "00";
+            else
+                date += string.Format("{0:D2}", int.Parse(dayBox.Text));
+
+            createData(date);
+
         }
     }
 }

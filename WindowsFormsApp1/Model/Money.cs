@@ -147,10 +147,21 @@ namespace WindowsFormsApp1
             }
         }
 
-        public DataSet GetDataSet()
+        public DataSet GetDataSet(string date)
         {
+            int year = int.Parse(date.Substring(0, 4));
+            int month = int.Parse(date.Substring(4, 2));
+            int day = int.Parse(date.Substring(6, 2));
+
             DataSet ds = new DataSet();
             String selectQuery = "select * from money where id = '" + PrimaryOperation.currentUser.Id + "'";
+            if (year != 0)
+                selectQuery += " and year(date) = " + year + "";
+            if (month != 0)
+                selectQuery += " and month(date) = " + month + "";
+            if (day != 0)
+                selectQuery += " and day(date) = " + day + "";
+
             MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
             adpt.Fill(ds, "money");
 

@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     class PrimaryOperation
     {
         public static User currentUser; 
-        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
+        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=asdrkd123;");
 
         
         //Add - Money
@@ -36,13 +36,13 @@ namespace WindowsFormsApp1
             User user = new User();
             return user.SelectUser(id, password);
         }
-
-        public static DataSet Binding()
+        
+        public static DataSet Binding(string date)
         {
             Money m = new Money();
-            return m.GetDataSet();
+            return m.GetDataSet(date);
         }
-        
+
         public static string DeleteItem(int num)
         {
             //num에 해당하는 Money객체 생성하는 함수
