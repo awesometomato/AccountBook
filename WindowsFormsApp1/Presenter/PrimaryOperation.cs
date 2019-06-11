@@ -17,10 +17,10 @@ namespace WindowsFormsApp1
 
         
         //Add - Money
-        public static string AddMoney(string money, string sign, string year, string month, string day, string memo, int num)
+        public static string AddMoney(string money, string sign, string kind, string year, string month, string day, string memo, int num)
         {
             Money m = new Money();
-            return m.AddMoney(money, sign, year, month, day, memo, num);
+            return m.AddMoney(money, sign, kind, year, month, day, memo, num);
         }
 
         //Join - User
@@ -37,10 +37,10 @@ namespace WindowsFormsApp1
             return user.SelectUser(id, password);
         }
         
-        public static DataSet Binding(string date)
+        public static DataSet Binding(string date, int flag, string expense, string income)
         {
             Money m = new Money();
-            return m.GetDataSet(date);
+            return m.GetDataSet(date, flag, expense, income);
         }
 
         public static string DeleteItem(int num)

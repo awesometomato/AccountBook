@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         public Add(int num)
         {
-            this.num = 2;
+            this.num = num;
             InitializeComponent();
             prepare_comboBox();
 
@@ -33,19 +33,18 @@ namespace WindowsFormsApp1
             if (money.Income_expense == "지출")
             {
                 expenseradiobutton.Checked = true;
-                incomeradiobutton.Checked = false;
+                expensecategorycomboBox.Text = money.Kind;
             }
             else
             {
                 incomeradiobutton.Checked = true;
-                expenseradiobutton.Checked = false;
+                incomecategorycomboBox.Text = money.Kind;
             }
             yearcomboBox.Text = money.Year.ToString();
             monthcomboBox.Text = money.Month.ToString();
             daycomboBox.Text = money.Day.ToString();
             memotextBox.Text = money.Kind;
             moneytextBox.Text = money.Won.ToString();
-
         }
 
         public void prepare_comboBox()
@@ -102,14 +101,22 @@ namespace WindowsFormsApp1
 
         private void addbutton_Click(object sender, EventArgs e)
         {
-
-            string str;
+            string str, kind = "";
 
             string sign = "2";
-            if (expenseradiobutton.Checked == true) { sign = "지출"; }
-            else if (incomeradiobutton.Checked == true) { sign = "수입"; }
+            
+            if (expenseradiobutton.Checked == true)
+            {
+                sign = "지출";
+                kind = expensecategorycomboBox.Text;
+            }
+            else if (incomeradiobutton.Checked == true)
+            {
+                sign = "수입";
+                kind = incomecategorycomboBox.Text;
+            }
 
-            str = PrimaryOperation.AddMoney(moneytextBox.Text, sign, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, memotextBox.Text, num);
+            str = PrimaryOperation.AddMoney(moneytextBox.Text, sign, kind, yearcomboBox.Text, monthcomboBox.Text, daycomboBox.Text, memotextBox.Text, num);
 
             MessageBox.Show(str);
 

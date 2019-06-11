@@ -41,7 +41,7 @@
             this.daycomboBox = new System.Windows.Forms.ComboBox();
             this.expenseradiobutton = new System.Windows.Forms.RadioButton();
             this.incomeradiobutton = new System.Windows.Forms.RadioButton();
-            this.expenseㄷategorycomboBox = new System.Windows.Forms.ComboBox();
+            this.expensecategorycomboBox = new System.Windows.Forms.ComboBox();
             this.incomecategorycomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -166,10 +166,10 @@
             this.incomeradiobutton.Text = "수입";
             this.incomeradiobutton.UseVisualStyleBackColor = true;
             // 
-            // expenseㄷategorycomboBox
+            // expensecategorycomboBox
             // 
-            this.expenseㄷategorycomboBox.FormattingEnabled = true;
-            this.expenseㄷategorycomboBox.Items.AddRange(new object[] {
+            this.expensecategorycomboBox.FormattingEnabled = true;
+            this.expensecategorycomboBox.Items.AddRange(new object[] {
             "식비",
             "교통비",
             "문화생활",
@@ -185,10 +185,10 @@
             "가전",
             "공과금",
             "카드대금"});
-            this.expenseㄷategorycomboBox.Location = new System.Drawing.Point(126, 21);
-            this.expenseㄷategorycomboBox.Name = "expenseㄷategorycomboBox";
-            this.expenseㄷategorycomboBox.Size = new System.Drawing.Size(121, 20);
-            this.expenseㄷategorycomboBox.TabIndex = 29;
+            this.expensecategorycomboBox.Location = new System.Drawing.Point(126, 21);
+            this.expensecategorycomboBox.Name = "expensecategorycomboBox";
+            this.expensecategorycomboBox.Size = new System.Drawing.Size(121, 20);
+            this.expensecategorycomboBox.TabIndex = 29;
             // 
             // incomecategorycomboBox
             // 
@@ -210,7 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 161);
             this.Controls.Add(this.incomecategorycomboBox);
-            this.Controls.Add(this.expenseㄷategorycomboBox);
+            this.Controls.Add(this.expensecategorycomboBox);
             this.Controls.Add(this.incomeradiobutton);
             this.Controls.Add(this.expenseradiobutton);
             this.Controls.Add(this.daycomboBox);
@@ -247,7 +247,7 @@
         private System.Windows.Forms.ComboBox daycomboBox;
         private System.Windows.Forms.RadioButton expenseradiobutton;
         private System.Windows.Forms.RadioButton incomeradiobutton;
-        private System.Windows.Forms.ComboBox expenseㄷategorycomboBox;
+        private System.Windows.Forms.ComboBox expensecategorycomboBox;
         private System.Windows.Forms.ComboBox incomecategorycomboBox;
     }
 }

@@ -97,7 +97,8 @@ namespace WindowsFormsApp1
                 else { return "오류!!"; }
             } catch(Exception ex)
             {
-                if (ex.Message == "Duplicate entry '" + id + "'for key 'PRIMARY'") { return "이미 존재하는 아이디 입니다."; }
+                if (ex.Message == "Duplicate entry '" + id + "' for key 'PRIMARY'")
+                    { return "이미 존재하는 아이디 입니다."; }
                 else { return ex.Message; }
             } finally
             {

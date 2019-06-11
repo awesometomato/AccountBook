@@ -16,9 +16,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             prepare_comboBox();
-            expenseBtn.Checked = false;
-            incomeBtn.Checked = false;
-            createData("00000000");
+            expensecheck.Checked = false;
+            incomecheck.Checked = false;
+            createData("00000000", 0, "", "");
         }
 
         public void prepare_comboBox()
@@ -73,11 +73,22 @@ namespace WindowsFormsApp1
             dayBox.Items.Add("31");
         }
 
-        public void createData(string date)
+        public void createData(string date, int flag, string expense, string income)
         {
-            DataSet ds = PrimaryOperation.Binding(date);
+            DataSet ds = PrimaryOperation.Binding(date,flag, expense, income);
             dataGridView1.DataSource = ds.Tables[0];
             this.dataGridView1.Columns["num"].Visible = false;
+
+            int balance = 0;
+            for(int i=0;i<dataGridView1.RowCount;i++)
+            {
+                int won = int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                if (dataGridView1.Rows[i].Cells["sign"].Value.ToString() == "지출")
+                    balance -= won;
+                else
+                    balance += won;
+            }
+            balancebox.Text = balance.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,7 +108,7 @@ namespace WindowsFormsApp1
         {
             Add showForm3 = new Add();
             showForm3.ShowDialog();
-            createData("00000000");
+            createData("00000000", 0, "", "");
         }
 
         private void changebutton_Click(object sender, EventArgs e) // 변경 버튼
@@ -107,7 +118,7 @@ namespace WindowsFormsApp1
            
             Add form = new Add(num);
             form.ShowDialog();
-            createData("00000000");
+            createData("00000000", 0, "", "");
         }
 
         private void deletebutton_Click(object sender, EventArgs e)
@@ -117,12 +128,13 @@ namespace WindowsFormsApp1
 
             PrimaryOperation.DeleteItem(num);
           
-            createData("00000000");
+            createData("00000000", 0, "" ,"");
         }
 
         private void searchbutton_Click(object sender, EventArgs e)
         {
-            string date = "";
+            string date = "", expense = "", income = "";
+            int flag;
 
             if (yearBox.Text == "")
                 date += "0000";
@@ -139,7 +151,24 @@ namespace WindowsFormsApp1
             else
                 date += string.Format("{0:D2}", int.Parse(dayBox.Text));
 
-            createData(date);
+            if ((expensecheck.Checked == false && incomecheck.Checked == false) ||
+                (expensecheck.Checked == true && incomecheck.Checked == true))
+            {
+                flag = 0;
+                income = incomecategorycomboBox.Text;
+                expense = expensecategorycomboBox.Text;
+            }
+            else if (expensecheck.Checked == true)
+            {
+                flag = 1;
+                expense = expensecategorycomboBox.Text;
+            }
+            else
+            {
+                flag = 2;
+                income = incomecategorycomboBox.Text;
+            }
+            createData(date, flag, expense, income);
 
         }
     }

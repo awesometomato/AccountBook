@@ -31,12 +31,6 @@
             this.yearlabel = new System.Windows.Forms.Label();
             this.monthlabel = new System.Windows.Forms.Label();
             this.daylabel = new System.Windows.Forms.Label();
-            this.incomeBtn = new System.Windows.Forms.RadioButton();
-            this.expenseBtn = new System.Windows.Forms.RadioButton();
-            this.moneyBox = new System.Windows.Forms.TextBox();
-            this.moneylabel = new System.Windows.Forms.Label();
-            this.memolabel = new System.Windows.Forms.Label();
-            this.memoBox = new System.Windows.Forms.TextBox();
             this.addbutton = new System.Windows.Forms.Button();
             this.comparebutton = new System.Windows.Forms.Button();
             this.logoutbutton = new System.Windows.Forms.Button();
@@ -48,8 +42,12 @@
             this.monthBox = new System.Windows.Forms.ComboBox();
             this.dayBox = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.expenseㄷategorycomboBox = new System.Windows.Forms.ComboBox();
+            this.expensecategorycomboBox = new System.Windows.Forms.ComboBox();
             this.incomecategorycomboBox = new System.Windows.Forms.ComboBox();
+            this.balancelabel = new System.Windows.Forms.Label();
+            this.balancebox = new System.Windows.Forms.TextBox();
+            this.expensecheck = new System.Windows.Forms.CheckBox();
+            this.incomecheck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,64 +77,6 @@
             this.daylabel.Size = new System.Drawing.Size(17, 12);
             this.daylabel.TabIndex = 5;
             this.daylabel.Text = "일";
-            // 
-            // incomeBtn
-            // 
-            this.incomeBtn.AutoSize = true;
-            this.incomeBtn.Location = new System.Drawing.Point(130, 33);
-            this.incomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.incomeBtn.Name = "incomeBtn";
-            this.incomeBtn.Size = new System.Drawing.Size(47, 16);
-            this.incomeBtn.TabIndex = 6;
-            this.incomeBtn.TabStop = true;
-            this.incomeBtn.Text = "수입";
-            this.incomeBtn.UseVisualStyleBackColor = true;
-            // 
-            // expenseBtn
-            // 
-            this.expenseBtn.AutoSize = true;
-            this.expenseBtn.Location = new System.Drawing.Point(130, 12);
-            this.expenseBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.expenseBtn.Name = "expenseBtn";
-            this.expenseBtn.Size = new System.Drawing.Size(47, 16);
-            this.expenseBtn.TabIndex = 7;
-            this.expenseBtn.TabStop = true;
-            this.expenseBtn.Text = "지출";
-            this.expenseBtn.UseVisualStyleBackColor = true;
-            // 
-            // moneyBox
-            // 
-            this.moneyBox.Location = new System.Drawing.Point(302, 106);
-            this.moneyBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.moneyBox.Name = "moneyBox";
-            this.moneyBox.Size = new System.Drawing.Size(116, 21);
-            this.moneyBox.TabIndex = 8;
-            // 
-            // moneylabel
-            // 
-            this.moneylabel.AutoSize = true;
-            this.moneylabel.Location = new System.Drawing.Point(425, 114);
-            this.moneylabel.Name = "moneylabel";
-            this.moneylabel.Size = new System.Drawing.Size(17, 12);
-            this.moneylabel.TabIndex = 9;
-            this.moneylabel.Text = "원";
-            // 
-            // memolabel
-            // 
-            this.memolabel.AutoSize = true;
-            this.memolabel.Location = new System.Drawing.Point(29, 109);
-            this.memolabel.Name = "memolabel";
-            this.memolabel.Size = new System.Drawing.Size(29, 12);
-            this.memolabel.TabIndex = 10;
-            this.memolabel.Text = "메모";
-            // 
-            // memoBox
-            // 
-            this.memoBox.Location = new System.Drawing.Point(77, 105);
-            this.memoBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.memoBox.Name = "memoBox";
-            this.memoBox.Size = new System.Drawing.Size(183, 21);
-            this.memoBox.TabIndex = 11;
             // 
             // addbutton
             // 
@@ -252,10 +192,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(643, 182);
             this.dataGridView1.TabIndex = 26;
             // 
-            // expenseㄷategorycomboBox
+            // expensecategorycomboBox
             // 
-            this.expenseㄷategorycomboBox.FormattingEnabled = true;
-            this.expenseㄷategorycomboBox.Items.AddRange(new object[] {
+            this.expensecategorycomboBox.FormattingEnabled = true;
+            this.expensecategorycomboBox.Items.AddRange(new object[] {
             "식비",
             "교통비",
             "문화생활",
@@ -271,10 +211,10 @@
             "가전",
             "공과금",
             "카드대금"});
-            this.expenseㄷategorycomboBox.Location = new System.Drawing.Point(205, 10);
-            this.expenseㄷategorycomboBox.Name = "expenseㄷategorycomboBox";
-            this.expenseㄷategorycomboBox.Size = new System.Drawing.Size(121, 20);
-            this.expenseㄷategorycomboBox.TabIndex = 27;
+            this.expensecategorycomboBox.Location = new System.Drawing.Point(205, 10);
+            this.expensecategorycomboBox.Name = "expensecategorycomboBox";
+            this.expensecategorycomboBox.Size = new System.Drawing.Size(121, 20);
+            this.expensecategorycomboBox.TabIndex = 27;
             // 
             // incomecategorycomboBox
             // 
@@ -290,13 +230,54 @@
             this.incomecategorycomboBox.Size = new System.Drawing.Size(121, 20);
             this.incomecategorycomboBox.TabIndex = 28;
             // 
+            // balancelabel
+            // 
+            this.balancelabel.AutoSize = true;
+            this.balancelabel.Location = new System.Drawing.Point(248, 117);
+            this.balancelabel.Name = "balancelabel";
+            this.balancelabel.Size = new System.Drawing.Size(29, 12);
+            this.balancelabel.TabIndex = 29;
+            this.balancelabel.Text = "잔액";
+            // 
+            // balancebox
+            // 
+            this.balancebox.Location = new System.Drawing.Point(283, 114);
+            this.balancebox.Name = "balancebox";
+            this.balancebox.ReadOnly = true;
+            this.balancebox.Size = new System.Drawing.Size(100, 21);
+            this.balancebox.TabIndex = 30;
+            // 
+            // expensecheck
+            // 
+            this.expensecheck.AutoSize = true;
+            this.expensecheck.Location = new System.Drawing.Point(130, 12);
+            this.expensecheck.Name = "expensecheck";
+            this.expensecheck.Size = new System.Drawing.Size(48, 16);
+            this.expensecheck.TabIndex = 31;
+            this.expensecheck.Text = "지출";
+            this.expensecheck.UseVisualStyleBackColor = true;
+            // 
+            // incomecheck
+            // 
+            this.incomecheck.AutoSize = true;
+            this.incomecheck.Location = new System.Drawing.Point(130, 36);
+            this.incomecheck.Name = "incomecheck";
+            this.incomecheck.Size = new System.Drawing.Size(48, 16);
+            this.incomecheck.TabIndex = 32;
+            this.incomecheck.Text = "수입";
+            this.incomecheck.UseVisualStyleBackColor = true;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 360);
+            this.Controls.Add(this.incomecheck);
+            this.Controls.Add(this.expensecheck);
+            this.Controls.Add(this.balancebox);
+            this.Controls.Add(this.balancelabel);
             this.Controls.Add(this.incomecategorycomboBox);
-            this.Controls.Add(this.expenseㄷategorycomboBox);
+            this.Controls.Add(this.expensecategorycomboBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dayBox);
             this.Controls.Add(this.monthBox);
@@ -308,12 +289,6 @@
             this.Controls.Add(this.logoutbutton);
             this.Controls.Add(this.comparebutton);
             this.Controls.Add(this.addbutton);
-            this.Controls.Add(this.memoBox);
-            this.Controls.Add(this.memolabel);
-            this.Controls.Add(this.moneylabel);
-            this.Controls.Add(this.moneyBox);
-            this.Controls.Add(this.expenseBtn);
-            this.Controls.Add(this.incomeBtn);
             this.Controls.Add(this.daylabel);
             this.Controls.Add(this.monthlabel);
             this.Controls.Add(this.yearlabel);
@@ -330,12 +305,6 @@
         private System.Windows.Forms.Label yearlabel;
         private System.Windows.Forms.Label monthlabel;
         private System.Windows.Forms.Label daylabel;
-        private System.Windows.Forms.RadioButton incomeBtn;
-        private System.Windows.Forms.RadioButton expenseBtn;
-        private System.Windows.Forms.TextBox moneyBox;
-        private System.Windows.Forms.Label moneylabel;
-        private System.Windows.Forms.Label memolabel;
-        private System.Windows.Forms.TextBox memoBox;
         private System.Windows.Forms.Button addbutton;
         private System.Windows.Forms.Button comparebutton;
         private System.Windows.Forms.Button logoutbutton;
@@ -347,7 +316,11 @@
         private System.Windows.Forms.ComboBox monthBox;
         private System.Windows.Forms.ComboBox dayBox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox expenseㄷategorycomboBox;
+        private System.Windows.Forms.ComboBox expensecategorycomboBox;
         private System.Windows.Forms.ComboBox incomecategorycomboBox;
+        private System.Windows.Forms.Label balancelabel;
+        private System.Windows.Forms.TextBox balancebox;
+        private System.Windows.Forms.CheckBox expensecheck;
+        private System.Windows.Forms.CheckBox incomecheck;
     }
 }

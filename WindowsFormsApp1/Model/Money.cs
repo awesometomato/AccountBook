@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     class Money
     {
         private String kind;
+        private String memo;
         private int won;
         private int year;
         private int month;
@@ -23,6 +24,11 @@ namespace WindowsFormsApp1
         {
             get { return kind; }
             set { kind = value; }
+        }
+        public String Memo
+        {
+            get { return memo; }
+            set { memo = value; }
         }
         public int Won
         {
@@ -58,9 +64,10 @@ namespace WindowsFormsApp1
             month = 0;
             day = 0;
             income_expense = "지출";
+            memo = "";
         }
 
-        public Money(String kind, int won, int year, int month, int day, string income_expense)
+        public Money(String kind, int won, int year, int month, int day, string income_expense, String memo)
         {
             this.kind = kind;
             this.won = won;
@@ -68,6 +75,7 @@ namespace WindowsFormsApp1
             this.month = month;
             this.day = day;
             this.income_expense = income_expense;
+            this.Memo = memo;
         }
 
         public Money(int num)
@@ -85,7 +93,8 @@ namespace WindowsFormsApp1
                     DataRow row;
                     row = ds.Tables[0].Rows[0];
 
-                    Kind = row["memo"].ToString();
+                    Kind = row["kind"].ToString();
+                    Memo = row["memo"].ToString();
                     Won = int.Parse(row["money"].ToString());
                     year = int.Parse(row["date"].ToString().Substring(0,4));
                     //MessageBox.Show(row["date"].ToString());
@@ -101,9 +110,9 @@ namespace WindowsFormsApp1
 
         }
 
-        public string AddMoney(string money, string sign, string year, string month, string day, string memo, int num)
+        public string AddMoney(string money, string sign, string kind, string year, string month, string day, string memo, int num)
         {
-            if (money == "" || sign == "2" || year =="" || month == "" || day == "")
+            if (money == "" || sign == "2" || year =="" || month == "" || day == "" || kind == "")
             {
                 return "모든 항목을 입력해주세요.";
             }
@@ -120,9 +129,9 @@ namespace WindowsFormsApp1
 
             string query;
             if (num == 0)
-                query = "INSERT INTO money (id,money,sign,date,memo) VALUES('" + PrimaryOperation.currentUser.Id + "'," + money + ",'" + sign + "'," + date + ",'" + memo + "')";
+                query = "INSERT INTO money (id,money,sign,kind,date,memo) VALUES('" + PrimaryOperation.currentUser.Id + "'," + money + ",'" + sign + "', '"+kind+"', " + date + ",'" + memo + "')";
             else
-                query = "update money set money = " + money + ", sign = '" + sign + "', date = " + date + ", memo = '" + memo + "' where num = " + num + "";
+                query = "update money set money = " + money + ", sign = '" + sign + "', kind = '"+kind+"', date = " + date + ", memo = '" + memo + "' where num = " + num + "";
                 
 
 
@@ -147,7 +156,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        public DataSet GetDataSet(string date)
+        public DataSet GetDataSet(string date, int flag, string expense, string income)
         {
             int year = int.Parse(date.Substring(0, 4));
             int month = int.Parse(date.Substring(4, 2));
@@ -161,6 +170,21 @@ namespace WindowsFormsApp1
                 selectQuery += " and month(date) = " + month + "";
             if (day != 0)
                 selectQuery += " and day(date) = " + day + "";
+            if (flag == 1)
+            {
+                if (expense != "")
+                    selectQuery += " and kind = '" + expense + "'";
+                else
+                    selectQuery += " and sign = '지출'";
+            }
+            else if (flag == 2)
+            {
+                if (income != "")
+                    selectQuery += " and kind = '" + income + "'";
+                else
+                    selectQuery += " and sign = '수입'";
+            }
+            selectQuery += " order by date";
 
             MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
             adpt.Fill(ds, "money");
