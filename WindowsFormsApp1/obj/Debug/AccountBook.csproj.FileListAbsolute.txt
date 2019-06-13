@@ -70,3 +70,6 @@ C:\Users\dlvmf\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.C
 C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CategoryCompare.resources
 C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MonthCompare.resources
 C:\Users\Kang\Desktop\C# 팀플\test\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DayCompare.resources
+C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CategoryCompare.resources
+C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MonthCompare.resources
+C:\Users\woojin_lee\Desktop\AccountBook\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DayCompare.resources

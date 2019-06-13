@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     class PrimaryOperation
     {
         public static User currentUser; 
-        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=asdrkd123;");
+        public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
 
         
         //Add - Money
@@ -48,6 +48,18 @@ namespace WindowsFormsApp1
             //num에 해당하는 Money객체 생성하는 함수
             Money money = new Money();
             return money.DeleteMoney(num);
+        }
+
+        public static int UserMonthlySum(int i)
+        {
+            Money money = new Money();
+            return money.UserMonthlySum(i);
+        }
+
+        public static int TotalMonthlySum(int i)
+        {
+            Money money = new Money();
+            return money.TotalMonthlySum(i);
         }
 
         //connection 위치

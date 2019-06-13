@@ -206,5 +206,65 @@ namespace WindowsFormsApp1
             return "해당 항목을 삭제하였습니다.";
            
         }
+
+        public int UserMonthlySum(int month)
+        {
+            int expense = 0;
+            int income = 0;
+
+            try
+            {
+                string expenseQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and month(date) = " + month + " and id = '" + PrimaryOperation.currentUser.Id + "' GROUP BY id";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(expenseQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    expense = int.Parse(row["sum(money)"].ToString());
+                }
+                else expense = 0;
+            } catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                if (ex.Message == "위치 0에 행이 없습니다.") expense = 0;
+                else expense = 99999999;
+            }
+
+            try
+            {
+                string incomeQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and month(date) = " + month + " and id = '" + PrimaryOperation.currentUser.Id + "' GROUP BY id";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(incomeQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    income = int.Parse(row["sum(money)"].ToString());
+                }
+                else income = 0;
+            } catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                if (ex.Message == "위치 0에 행이 없습니다.") income = 0;
+                else income = 99999999;
+            }
+
+            //return income;
+            return income - expense;
+        }
+
+        public int TotalMonthlySum(int month)
+        {
+            return 0;
+        }
     }
 }
