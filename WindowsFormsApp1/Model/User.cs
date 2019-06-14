@@ -74,6 +74,30 @@ namespace WindowsFormsApp1
             Age = age;
         }
 
+        public int UserCnt()
+        {
+            try
+            {
+                string selectQuery = "SELECT count(id) from user";
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "user");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+                    return int.Parse(row["count(id)"].ToString());
+                }
+                else return 0;
+
+            } catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
         public string AddUser(string id, string password, string passwordCheck, string name, string gender, string age)
         {
             if (id == "" || password == "" || name == "" || gender == "2" || age == "") { return "모든 항목을 입력해주세요."; }

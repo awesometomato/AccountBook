@@ -50,16 +50,34 @@ namespace WindowsFormsApp1
             return money.DeleteMoney(num);
         }
 
-        public static int UserMonthlySum(int i)
+        public static int UserMonthlyExpense(int i)
         {
             Money money = new Money();
-            return money.UserMonthlySum(i);
+            return money.UserMonthlyExpense(i);
         }
 
-        public static int TotalMonthlySum(int i)
+        public static int UserMonthlyIncome(int i)
         {
             Money money = new Money();
-            return money.TotalMonthlySum(i);
+            return money.UserMonthlyIncome(i);
+        }
+
+        public static int TotalMonthlyExpense(int i)
+        {
+            Money money = new Money();
+            return money.TotalMonthlyExpense(i);
+        }
+
+        public static int TotalMonthlyIncome(int i)
+        {
+            Money money = new Money();
+            return money.TotalMonthlyIncome(i);
+        }
+
+        public static int UserCnt()
+        {
+            User user = new User();
+            return user.UserCnt();
         }
 
         //connection 위치

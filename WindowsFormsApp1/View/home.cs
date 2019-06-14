@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
             DataSet ds = PrimaryOperation.Binding(date,flag, expense, income);
             dataGridView1.DataSource = ds.Tables[0];
             this.dataGridView1.Columns["num"].Visible = false;
+            this.dataGridView1.Columns["id"].Visible = false;
 
             int balance = 0;
             for(int i=0;i<dataGridView1.RowCount;i++)

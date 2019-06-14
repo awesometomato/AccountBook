@@ -207,14 +207,13 @@ namespace WindowsFormsApp1
            
         }
 
-        public int UserMonthlySum(int month)
+        public int UserMonthlyExpense(int month)
         {
             int expense = 0;
-            int income = 0;
 
             try
             {
-                string expenseQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and month(date) = " + month + " and id = '" + PrimaryOperation.currentUser.Id + "' GROUP BY id";
+                string expenseQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and month(date) = " + month.ToString() + " and id = '" + PrimaryOperation.currentUser.Id + "' GROUP BY id";
                 MySqlDataAdapter adpt = new MySqlDataAdapter(expenseQuery, PrimaryOperation.connection);
 
                 DataSet ds = new DataSet();
@@ -235,9 +234,18 @@ namespace WindowsFormsApp1
                 else expense = 99999999;
             }
 
+            return expense;
+            
+        }
+        
+        
+        public int UserMonthlyIncome(int month)
+        {
+            int income = 0;
+
             try
             {
-                string incomeQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and month(date) = " + month + " and id = '" + PrimaryOperation.currentUser.Id + "' GROUP BY id";
+                string incomeQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and month(date) = " + month.ToString() + " and id = '" + PrimaryOperation.currentUser.Id + "' GROUP BY id";
                 MySqlDataAdapter adpt = new MySqlDataAdapter(incomeQuery, PrimaryOperation.connection);
 
                 DataSet ds = new DataSet();
@@ -251,20 +259,150 @@ namespace WindowsFormsApp1
                     income = int.Parse(row["sum(money)"].ToString());
                 }
                 else income = 0;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message);
                 if (ex.Message == "위치 0에 행이 없습니다.") income = 0;
                 else income = 99999999;
             }
 
-            //return income;
-            return income - expense;
+            return income;
         }
 
-        public int TotalMonthlySum(int month)
+        public int TotalMonthlyExpense(int month)
         {
-            return 0;
+            int expense = 0;
+            int UserCnt = PrimaryOperation.UserCnt();
+            try
+            {
+                string expenseQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and month(date) = " + month.ToString();
+                MySqlDataAdapter adpt = new MySqlDataAdapter(expenseQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    if (row["sum(money)"] == null) return 0;
+                    expense = int.Parse(row["sum(money)"].ToString());
+                }
+                else expense = 0;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("expense" + month + ex.Message);
+                if (ex.Message == "위치 0에 행이 없습니다.") expense = 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") expense = 0;
+                else expense = -100;
+            }
+
+            return expense / UserCnt;
+
         }
+
+        public int TotalMonthlyIncome(int month)
+        {
+            int income = 0;
+            int UserCnt = PrimaryOperation.UserCnt();
+            try
+            {
+                string incomeQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and month(date) = " + month.ToString();
+                MySqlDataAdapter adpt = new MySqlDataAdapter(incomeQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    if (row["sum(money)"].ToString() == "NULL") return 0;
+                    income = int.Parse(row["sum(money)"].ToString());
+                }
+                else income = 0;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("income" + month + ex.Message);
+                if (ex.Message == "위치 0에 행이 없습니다.") income = 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") income = 0;
+                else income = -100;
+            }
+
+            return income / UserCnt;
+        }
+
+        /*
+        public int TotalMonthlyExpense(int month)
+        {
+            int userCnt = PrimaryOperation.UserCnt();
+            int expense = 0;
+            try
+            {
+                string expenseQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and month(date) = " + month.ToString();
+                MySqlDataAdapter adpt = new MySqlDataAdapter(expenseQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    expense = int.Parse(row["sum(money)"].ToString());
+                    return expense / userCnt;
+                }
+                else return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                if (ex.Message == "위치 0에 행이 없습니다.") return 0;
+                else return 99999999;
+            }
+        }
+        */
+
+        /*
+        public int TotalMonthlyIncome(int month)
+        {
+            int userCnt = PrimaryOperation.UserCnt();
+            int income = 0;
+
+            try
+            {
+                
+                string incomeQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and month(date) = " + month.ToString();
+                MySqlDataAdapter adpt = new MySqlDataAdapter(incomeQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    income = int.Parse(row["sum(money)"].ToString());
+                    return income / userCnt;
+                }
+                else return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("TotalMonthlyIncome error : " + ex.Message);
+                if (ex.Message == "위치 0에 행이 없습니다.") return 0;
+                else return -9999999;
+            }
+
+            
+        }
+        */
     }
 }
