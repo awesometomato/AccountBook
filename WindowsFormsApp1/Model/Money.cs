@@ -337,15 +337,16 @@ namespace WindowsFormsApp1
             return income / UserCnt;
         }
 
-        /*
-        public int TotalMonthlyExpense(int month)
+        public int ExpenseSum(int i) // int = 0 : 사용자 합, int = 1 : 전체 합
         {
-            int userCnt = PrimaryOperation.UserCnt();
-            int expense = 0;
             try
             {
-                string expenseQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and month(date) = " + month.ToString();
-                MySqlDataAdapter adpt = new MySqlDataAdapter(expenseQuery, PrimaryOperation.connection);
+                string selectQuery = "";
+
+                if (i == 0) selectQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and id = '" + PrimaryOperation.currentUser.Id + "'";
+                else if (i == 1) selectQuery = "SELECT sum(money) FROM money WHERE sign = '지출'";
+
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
 
                 DataSet ds = new DataSet();
                 adpt.Fill(ds, "money");
@@ -355,31 +356,27 @@ namespace WindowsFormsApp1
                     DataRow row;
                     row = ds.Tables[0].Rows[0];
 
-                    expense = int.Parse(row["sum(money)"].ToString());
-                    return expense / userCnt;
+                    return int.Parse(row["sum(money)"].ToString());
                 }
                 else return 0;
-            }
-            catch (Exception ex)
+            } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                if (ex.Message == "위치 0에 행이 없습니다.") return 0;
-                else return 99999999;
+                if (ex.Message == "위치에 0에 행이 없습니다.") return 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") return 0;
+                else return 0;
             }
         }
-        */
 
-        /*
-        public int TotalMonthlyIncome(int month)
+        public int IncomeSum(int i) // int = 0 : 사용자 합, int = 1 : 전체 합
         {
-            int userCnt = PrimaryOperation.UserCnt();
-            int income = 0;
-
             try
             {
-                
-                string incomeQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and month(date) = " + month.ToString();
-                MySqlDataAdapter adpt = new MySqlDataAdapter(incomeQuery, PrimaryOperation.connection);
+                string selectQuery = "";
+
+                if (i == 0) selectQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and id = '" + PrimaryOperation.currentUser.Id + "'";
+                else if (i == 1) selectQuery = "SELECT sum(money) FROM money WHERE sign = '수입'";
+
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
 
                 DataSet ds = new DataSet();
                 adpt.Fill(ds, "money");
@@ -389,20 +386,138 @@ namespace WindowsFormsApp1
                     DataRow row;
                     row = ds.Tables[0].Rows[0];
 
-                    income = int.Parse(row["sum(money)"].ToString());
-                    return income / userCnt;
+                    return int.Parse(row["sum(money)"].ToString());
                 }
                 else return 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("TotalMonthlyIncome error : " + ex.Message);
-                if (ex.Message == "위치 0에 행이 없습니다.") return 0;
-                else return -9999999;
+                if (ex.Message == "위치에 0에 행이 없습니다.") return 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") return 0;
+                else return 0;
             }
-
-            
         }
-        */
+
+        public double UserExpensePercent(int i)
+        {
+            try
+            {
+                string selectQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and id = '" + PrimaryOperation.currentUser.Id + "' and kind = '" + PrimaryOperation.ExpenseStr[i] + "'";
+
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    return int.Parse(row["sum(money)"].ToString()) / (double)ExpenseSum(0) * 100;
+                }
+                else return 0;
+            }
+            catch(Exception ex)
+            {
+                if (ex.Message == "위치에 0에 행이 없습니다.") return 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") return 0;
+                else return 0;
+            }
+        }
+
+        public double UserIncomePercent(int i)
+        {
+            try
+            {
+                string selectQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and id = '" + PrimaryOperation.currentUser.Id + "' and kind = '" + PrimaryOperation.IncomeStr[i] + "'";
+
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    return int.Parse(row["sum(money)"].ToString()) / (double)IncomeSum(0) * 100;
+                }
+                else return 0;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "위치에 0에 행이 없습니다.") return 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") return 0;
+                else return 0;
+            }
+        }
+
+        public double TotalExpensePercent(int i)
+        {
+            try
+            {
+                string selectQuery = "SELECT sum(money) FROM money WHERE sign = '지출' and kind = '" + PrimaryOperation.ExpenseStr[i] + "'";
+
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    return int.Parse(row["sum(money)"].ToString()) / (double)ExpenseSum(1) * 100;
+                }
+                else return 0;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Money 479 : " + ex.Message);
+                if (ex.Message == "위치에 0에 행이 없습니다.") return 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") return 0;
+                else
+                {
+                    MessageBox.Show("Money 479 : " + ex.Message);
+                    return 0;
+                }
+            }
+        }
+
+        public double TotalIncomePercent(int i)
+        {
+            try
+            {
+                string selectQuery = "SELECT sum(money) FROM money WHERE sign = '수입' and kind = '" + PrimaryOperation.IncomeStr[i] + "'";
+
+                MySqlDataAdapter adpt = new MySqlDataAdapter(selectQuery, PrimaryOperation.connection);
+
+                DataSet ds = new DataSet();
+                adpt.Fill(ds, "money");
+
+                if (ds.Tables.Count > 0)
+                {
+                    DataRow row;
+                    row = ds.Tables[0].Rows[0];
+
+                    return int.Parse(row["sum(money)"].ToString()) / (double)IncomeSum(1) * 100;
+                }
+                else return 0;
+            }
+            catch (Exception ex)
+            {
+
+                if (ex.Message == "위치에 0에 행이 없습니다.") return 0;
+                else if (ex.Message == "입력 문자열의 형식이 잘못되었습니다.") return 0;
+                else
+                {
+                    MessageBox.Show("Money 508 : " + ex.Message);
+                    return 0;
+                }
+            }
+        }
     }
 }

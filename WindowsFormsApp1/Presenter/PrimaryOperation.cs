@@ -14,7 +14,8 @@ namespace WindowsFormsApp1
     {
         public static User currentUser; 
         public static MySqlConnection connection = new MySqlConnection("Server=localhost;Database=project;Uid=root;Pwd=s17011564!;");
-
+        public static string[] ExpenseStr = { "식비", "교통비", "문화생활", "생필품", "의류", "미용", "의료/건강", "교육", "통신비", "회비", "경조사", "저축", "가전", "공과금", "카드대금" };
+        public static string[] IncomeStr = { "월급", "용돈", "이월", "자산인출", "기타" };
         
         //Add - Money
         public static string AddMoney(string money, string sign, string kind, string year, string month, string day, string memo, int num)
@@ -78,6 +79,30 @@ namespace WindowsFormsApp1
         {
             User user = new User();
             return user.UserCnt();
+        }
+
+        public static double UserExpensePercent(int i)
+        {
+            Money money = new Money();
+            return money.UserExpensePercent(i);
+        }
+
+        public static double UserIncomePercent(int i)
+        {
+            Money money = new Money();
+            return money.UserIncomePercent(i);
+        }
+
+        public static double TotalExpensePercent(int i)
+        {
+            Money money = new Money();
+            return money.TotalExpensePercent(i);
+        }
+
+        public static double TotalIncomePercent(int i)
+        {
+            Money money = new Money();
+            return money.TotalIncomePercent(i);
         }
 
         //connection 위치

@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
 
         private void MonthCompare_Load(object sender, EventArgs e)
         {
-            userLabel.Text = PrimaryOperation.currentUser.Name;
 
             userChart.Series["수입"].Points.Clear();
             for (int i = 0; i < 12; i++)
