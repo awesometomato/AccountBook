@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         {
             userBtn.Enabled = false;
             totalBtn.Enabled = true;
+            label.Text = "<사용자>";
 
             for (int i = 0; i < 15; i++)
             {
@@ -46,6 +47,7 @@ namespace WindowsFormsApp1
         {
             userBtn.Enabled = false;
             totalBtn.Enabled = true;
+            label.Text = "<사용자>";
 
             for (int i = 0; i < 15; i++)
             {
@@ -71,6 +73,7 @@ namespace WindowsFormsApp1
         {
             userBtn.Enabled = true;
             totalBtn.Enabled = false;
+            label.Text = "<전체 사용자>";
 
             for (int i = 0; i < 15; i++)
             {
